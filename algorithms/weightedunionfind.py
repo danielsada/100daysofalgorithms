@@ -8,13 +8,14 @@ __email__ = "yo@danielsada.mx"
 Implementation of QuickUnion
 Complexity:
 Initialize => O(n)
-Union      => O(n)
-Connected  => O(n)
+Union      => O(lg N)
+Connected  => O(lg N)
 """
 
-class QuickUnion(object):
+class WeightedUnionFind(object):
     def __init__(self, n):
         self.id = [None]*n
+        self.sz = [1]*n
         for i in range(0, n):
             self.id[i] = i
 
@@ -29,5 +30,10 @@ class QuickUnion(object):
     def union(self, a:int, b:int):      
         a_id:int = self.root(a)
         b_id:int = self.root(b)
-        self.id[a_id] = b_id
+        if self.sz[a_id] > self.sz[b_id]:
+            self.sz[a_id] += self.sz[b_id] 
+            self.id[b_id] = a_id
+        else:
+            self.sz[b_id] += self.sz[a_id] 
+            self.id[a_id] = b_id
 
