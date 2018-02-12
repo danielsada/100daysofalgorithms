@@ -19,7 +19,7 @@ For M union-find operations in a set of N objects.
 ```
 
 
-## Quick Find [(Go to Code.)](quickfind.py)
+## Quick Find [(Go to Code.)](algorithms/quickfind.py)
 
 ```
 Complexity:
@@ -28,7 +28,7 @@ Union      => O(n)
 Connected  => O(1)
 ```
 
-## Quick Union [(Go to Code.)](quickunion.py)
+## Quick Union [(Go to Code.)](algorithms/quickunion.py)
 
 ```
 Complexity:
@@ -37,7 +37,7 @@ Union      => O(N)
 Connected  => O(N)
 ```
 
-## Weighted Union Find [(Go to Code.)](weightedunionfind.py)
+## Weighted Union Find [(Go to Code.)](algorithms/weightedunionfind.py)
 
 ```
 Complexity:
@@ -46,7 +46,7 @@ Union      => O(lg N)
 Connected  => O(lg N)
 ```
 
-## PathFlattened and Weighted Union Find [(Go to Code.)](pathflattenedunionfind.py)
+## PathFlattened and Weighted Union Find [(Go to Code.)](algorithms/pathflattenedunionfind.py)
 
 ```
 Complexity:
