@@ -4,6 +4,29 @@ Hello! I'm Daniel Sada. I'm trying to do an algorithm or two a day or at least t
 
 Algorithms so far with complexities:
 
+Day 1:
+- [x] Quick Find
+- [x] Quick Union
+
+Day 2:
+- [x] Union Find
+- [x] Weighted Union Find
+- [x] Flattened Path Union Find
+
+In progress :
+- [ ] (undirected) Graph API
+- [ ] Depth-first search
+- [ ] Breath-first search
+- [ ] Connected components
+- [ ] Cycle in graphs problem
+- [ ] Bipartite Graph Problem
+- [ ] 7 Bridges of Konnisburg
+- [ ] Hamiltonian Cycle
+- [ ] Directed Graphs API
+- [ ] Directed Graphs DFS
+- [ ] Mark-sweep algorithm
+- [ ] Directed Graphs BFS
+
 # Union Find
 
 ## Comparison: 
