@@ -1,10 +1,16 @@
 #!/usr/bin/env 
-"""
-Implements the QuickFind algorithm for connected nodes.
-"""
+
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
+
+"""
+Implements the QuickFind algorithm for connected nodes.
+Complexity:
+Initialize => O(n)
+Union      => O(n)
+Connected  => O(1)
+"""
 
 class QuickFind(object):
     def __init__(self, n):

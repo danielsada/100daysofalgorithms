@@ -6,6 +6,14 @@ __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
 
+"""
+Implementation of QuickUnion
+Complexity:
+Initialize => O(n)
+Union      => O(n)
+Connected  => O(n)
+"""
+
 class QuickUnion(object):
     def __init__(self, n):
         self.id = [None]*n
