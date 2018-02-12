@@ -31,7 +31,6 @@ Connected  => O(1)
 ## Quick Union [(Go to Code.)](quickunion.py)
 
 ```
-Implements the QuickFind algorithm for connected nodes.
 Complexity:
 Initialize => O(N)
 Union      => O(N)
