@@ -18,7 +18,7 @@ class QuickFind(object):
     def union(self, a:int, b:int):      
         a_id:int = self.id[a]
         b_id:int = self.id[b]
-        for i,k in enumerate(self.id):
+        for i,_ in enumerate(self.id):
             if self.id[i] == a_id:
                 self.id[i] = b_id
 
