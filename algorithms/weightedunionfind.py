@@ -5,7 +5,7 @@ __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
 
 """
-Implementation of QuickUnion
+Implementation of Weighted Union Find
 Complexity:
 Initialize => O(n)
 Union      => O(lg N)
