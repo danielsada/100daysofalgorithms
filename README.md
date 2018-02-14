@@ -13,8 +13,11 @@ Day 2:
 - [x] Weighted Union Find
 - [x] Flattened Path Union Find
 
+Day 3:
+- [x] (partial) (undirected) Graph API
+
 In progress :
-- [ ] (undirected) Graph API
+
 - [ ] Depth-first search
 - [ ] Breath-first search
 - [ ] Connected components

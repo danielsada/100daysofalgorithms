@@ -23,10 +23,10 @@ class UGraph:
     def close(self,v:int):
         return iter(self.adj[v])
     
-    def num_V(self):
+    def num_V(self) -> int:
         return len(self.adj)
     
-    def num_E(self,v):
+    def num_E(self,v) -> int:
         return len(self.adj[v])
     
     @staticmethod
@@ -38,7 +38,6 @@ class UGraph:
 
 
 g = UGraph(10);
-
 g.add_edge(2,4);
 g.add_edge(2,6);
 g.add_edge(2,8);
