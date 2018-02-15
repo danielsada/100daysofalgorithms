@@ -12,7 +12,7 @@ Implementation of a Undirected Graph for further algorithm exercises.
 class UGraph:
     def __init__(self, v:int):
         self.V = v
-        self.adj = [None]*100
+        self.adj = [None]*v
         for i in range(0,v):
             self.adj[i] = [];
     
@@ -30,17 +30,9 @@ class UGraph:
         return len(self.adj[v])
     
     @staticmethod
-    def degree(G: UGraph, v: int):
+    def degree(G, v):
         Gdegree = 0
         for connections in G.close(v):
             Gdegree+=1
         return Gdegree
 
-
-g = UGraph(10);
-g.add_edge(2,4);
-g.add_edge(2,6);
-g.add_edge(2,8);
-g.add_edge(2,9);
-for e in g.close(2):
-    print(e)

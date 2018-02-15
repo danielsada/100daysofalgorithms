@@ -1,8 +1,8 @@
 # 100daysofalgorithms
 
-Hello! I'm Daniel Sada. I'm trying to do an algorithm or two a day or at least try to solve a problem a day. I'll be alternating between new algorithms and working in problems with those algorithms.
+Hello! I'm Daniel Sada. I'm trying to do an algorithm or two a day or at least try to solve a problem a day. I'll be alternating between new algorithms and working in problems with those algorithms. I'm also fairly new with python, and I want to get aquaintanced with Python3.
 
-Algorithms so far with complexities:
+## Day to Day log.
 
 Day 1:
 - [x] Quick Find
@@ -16,9 +16,14 @@ Day 2:
 Day 3:
 - [x] (partial) (undirected) Graph API
 
+Day 4:
+- [x] (finished) (undirected) Graph API
+- [x] Graph API tests.
+- [x] Depth-First search initialization
+
 In progress :
 
-- [ ] Depth-first search
+- [ ] Path between two nodes with backtracking.
 - [ ] Breath-first search
 - [ ] Connected components
 - [ ] Cycle in graphs problem
@@ -31,6 +36,7 @@ In progress :
 - [ ] Directed Graphs BFS
 
 # Union Find
+## Tests for Union-Find [(Go to Tests.)](algorithms/union-find/unionfindtests.py)
 
 ## Comparison: 
 ```
@@ -45,7 +51,7 @@ For M union-find operations in a set of N objects.
 ```
 
 
-## Quick Find [(Go to Code.)](algorithms/quickfind.py)
+## Quick Find [(Go to Code.)](algorithms/union-find/quickfind.py)
 
 ```
 Complexity:
@@ -54,7 +60,7 @@ Union      => O(n)
 Connected  => O(1)
 ```
 
-## Quick Union [(Go to Code.)](algorithms/quickunion.py)
+## Quick Union [(Go to Code.)](algorithms/union-find/quickunion.py)
 
 ```
 Complexity:
@@ -63,7 +69,7 @@ Union      => O(N)
 Connected  => O(N)
 ```
 
-## Weighted Union Find [(Go to Code.)](algorithms/weightedunionfind.py)
+## Weighted Union Find [(Go to Code.)](algorithms/union-find/weightedunionfind.py)
 
 ```
 Complexity:
@@ -72,7 +78,7 @@ Union      => O(lg N)
 Connected  => O(lg N)
 ```
 
-## PathFlattened and Weighted Union Find [(Go to Code.)](algorithms/pathflattenedunionfind.py)
+## PathFlattened and Weighted Union Find [(Go to Code.)](algorithms/union-find/pathflattenedunionfind.py)
 
 ```
 Complexity:
@@ -83,3 +89,11 @@ Union
 Connected  
     => O( N + M lg* N) (about linear in practice as lg* of N^65536 is 5)
 ```
+
+# Depth First Search
+
+## Undirected graph API [(Go to Code.)](algorithms/ugraph/ugraph.py) [(Tests)](algorithms/ugraph/ugraphtest.py)
+
+
+Uses adjecency lists to represent a graph.
+
