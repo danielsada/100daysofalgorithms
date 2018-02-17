@@ -17,4 +17,20 @@ class BreadthFirstPaths:
 
     def __init__(self, g: UGraph, s: int):
         self.queue = []
+        self.visited = [False] * g.num_V()
+        self.distanceTo = [False] * g.num_V()
+        self.edgeTo = [None] * g.num_V()
+        self.g = g
+
+        self.visited[s] = True
         self.queue.append(s)
+        while len(self.queue) != 0:
+            current_item = self.queue.pop()
+            for elem in self.g.close(current_item):
+                if not self.visited[elem]:
+                    self.queue.insert(0, elem)
+                    self.visited[elem] = True
+                    self.edgeTo[elem] = current_item
+
+
+# 72
