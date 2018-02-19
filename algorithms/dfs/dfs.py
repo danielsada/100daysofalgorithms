@@ -23,8 +23,8 @@ class DepthFirstPaths:
         self.marked[v] = True
         for node in g.close(v):
             if not self.marked[node]:
-                self.dfs(g, node)
                 self.edgeTo[node] = v
+                self.dfs(g, node)
 
     def hasPathTo(self, v: int):
         return self.marked[v]
