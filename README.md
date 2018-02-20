@@ -21,19 +21,53 @@ Day 4:
 - [x] Graph API tests.
 - [x] Depth-First search initialization
 
-In progress :
-
-- [ ] Path between two nodes with backtracking.
+Day 5: 
+- [x] Path between two nodes with backtracking.
 - [ ] Breath-first search
-- [ ] Connected components
-- [ ] Cycle in graphs problem
+
+Day 6:
+- [x] Breath-first search
+- [x] Breath-first tests
+
+Day 7:
+- [x] Connected components
+
+Day 8:
 - [ ] Bipartite Graph Problem
+  
+Day 9:
+- [ ] Heap
+- [ ] MinHeap
+
+NextTODOs:
+- Add tests to connected components
+- Finish Bipartite Graphs
+- Finish max and min heap
+
+Backlog:
+- [ ] Cycle in graphs problem
 - [ ] 7 Bridges of Konnisburg
 - [ ] Hamiltonian Cycle
 - [ ] Directed Graphs API
 - [ ] Directed Graphs DFS
 - [ ] Mark-sweep algorithm
 - [ ] Directed Graphs BFS
+
+
+
+# Graphs
+## Undirected graph API [(Go to Code.)](algorithms/ugraph/ugraph.py) [(Tests)](algorithms/ugraph/ugraphtest.py)
+## Depth First Search [(Go to Code.)](algorithms/dfs/dfs.py) [(Tests)](algorithms/dfs/dfstest.py)
+## Breath First Search [(Go to Code.)](algorithms/bfs/bfs.py) [(Tests)](algorithms/bfs/bfstest.py)
+## Connected Components [(Go to Code.)](algorithms/connected_components/connected_components.py) (Tests) [Pending]
+
+
+# Heaps
+
+## Generic Heap [(Go to Code.)](algorithms/heaps/heap.py) 
+## Max Heap [(Go to Code.)](algorithms/heaps/maxheap.py) 
+## Min Heap [(Go to Code.)](algorithms/heaps/minheap.py) 
+
 
 # Union Find
 ## Tests for Union-Find [(Go to Tests.)](algorithms/union-find/unionfindtests.py)
@@ -89,11 +123,4 @@ Union
 Connected  
     => O( N + M lg* N) (about linear in practice as lg* of N^65536 is 5)
 ```
-
-# Depth First Search
-
-## Undirected graph API [(Go to Code.)](algorithms/ugraph/ugraph.py) [(Tests)](algorithms/ugraph/ugraphtest.py)
-
-
-Uses adjecency lists to represent a graph.
 
