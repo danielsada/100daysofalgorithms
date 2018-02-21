@@ -5,7 +5,7 @@ __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
 
 """
-This isn't in the current pathway, but I wanted to take some 
+This isn't in the current pathway, but I wanted to take some
 time to make a MaxHeap in python.
 Interesting note, is that the default heap implementation is
 a min heap
@@ -14,34 +14,45 @@ a min heap
 
 class MinHeap(Heap):
     def __init__(self):
-        Heap.__init__(self)
+        super().__init__()
 
     def peek(self):
-        if Heap.size <= 0:
+        if self.size <= 0:
             raise IndexError("Well, you went out of the bucket friend.")
-        return Heap.elements[0]
+        return self.elements[0]
 
     def push(self, item):
-        Heap.elements.append(item)
-        Heap.size += 1
+        self.elements.append(item)
+        self.size += 1
         self.heapifyUp()
 
     def pop(self):
-        if Heap.size <= 0:
+        if self.size <= 0:
             raise IndexError("Well, you went out of the bucket friend.")
-        returnItem = Heap.elements[0]
-        Heap.elements[0] = Heap.elements[Heap.size - 1]
-        Heap.size -= 1
+        item = self.elements[0]
+        self.elements[0] = self.elements[self.size - 1]
+        del self.elements[-1]
+        self.size -= 1
         self.heapifyDown()
-        return returnItem
+        return item
 
     def heapifyDown(self):
-        pass
+        index = 0
+
+        # If it has a left it has a right, provided its a heap.
+        while self.has_left_index(index):
+            smallValueIndex = self.left_index(index)
+            if self.has_right_index(index) and self.value_right(index) < self.value_left(index):
+                smallValueIndex = self.right_index(index)
+
+            if self.elements[index] < self.elements[smallValueIndex]:
+                break
+            else:
+                self.swap(index, smallValueIndex)
+            index = smallValueIndex
 
     def heapifyUp(self):
-        pass
-
-
-hs = MinHeap()
-hs.push(3)
-print(hs.peek())
+        last_element = self.size - 1
+        while self.has_parent(last_element) and self.parent_index(last_element) > self.elements[last_element]:
+            self.swap(self.parent_index(last_element), last_element)
+            last_element = self.parent_index(last_element)

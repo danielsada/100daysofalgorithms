@@ -9,8 +9,9 @@ Implementation of basic Heap Methods in python
 
 
 class Heap:
-    size = 0
-    elements = []
+    def __init__(self):
+        self.size = 0
+        self.elements = []
 
     @staticmethod
     def left_index(parentIndex):
@@ -25,13 +26,13 @@ class Heap:
         return (childIndex-1)/2
 
     def has_right_index(self, parentIndex):
-        return (Heap.right_index(parentIndex) > self.size)
+        return (self.right_index(parentIndex) > self.size)
 
     def has_left_index(self, parentIndex):
-        return (Heap.left_index(parentIndex) > self.size)
+        return (self.left_index(parentIndex) < self.size)
 
     def has_parent(self, childIndex):
-        return (Heap.parent_index(childIndex) >= 0)
+        return (self.parent_index(childIndex) >= 0)
 
     def value_right(self, parentIndex):
         return self.elements[self.right_index(parentIndex)]
