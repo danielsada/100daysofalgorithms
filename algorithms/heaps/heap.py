@@ -10,7 +10,6 @@ Implementation of basic Heap Methods in python
 
 class Heap:
     def __init__(self):
-        self.size = 0
         self.elements = []
 
     @staticmethod
@@ -23,10 +22,14 @@ class Heap:
 
     @staticmethod
     def parent_index(childIndex):
-        return (childIndex-1)/2
+        return (childIndex-1)//2
+
+    @property
+    def size(self):
+        return len(self.elements)
 
     def has_right_index(self, parentIndex):
-        return (self.right_index(parentIndex) > self.size)
+        return (self.right_index(parentIndex) < self.size)
 
     def has_left_index(self, parentIndex):
         return (self.left_index(parentIndex) < self.size)
