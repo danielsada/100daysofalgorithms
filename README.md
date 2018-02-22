@@ -36,13 +36,20 @@ Day 8:
 - [ ] Bipartite Graph Problem
   
 Day 9:
-- [ ] Heap
-- [ ] MinHeap
+- [x] Heap
+- [x] MinHeap
+
+Day 10:
+- [x] Min Heap
+
+Day 11:
+- [x] Min Heap
+- [x] Max Heap
+- [x] Heap Unit tests.
 
 NextTODOs:
 - Add tests to connected components
 - Finish Bipartite Graphs
-- Finish max and min heap
 
 Backlog:
 - [ ] Cycle in graphs problem
@@ -53,6 +60,46 @@ Backlog:
 - [ ] Mark-sweep algorithm
 - [ ] Directed Graphs BFS
 
+Topics to cover:
+ - [x] union-find
+ - [ ] binary search
+ - [ ] stacks
+ - [ ] queues
+ - [ ] bags
+ - [ ] insertion sort
+ - [ ] selection sort
+ - [ ] shellsort
+ - [ ] quicksort
+ - [ ] 3-way quicksort
+ - [ ] mergesort
+ - [ ] heapsort
+ - [ ] binary heaps
+ - [ ] binary search trees
+ - [ ] red−black trees
+ - [ ] separate chaining and linear probing hash tables
+ - [ ] Graham scan
+ - [ ] and kd-trees
+ - [x] depth-first search
+ - [x] breadth-first search
+ - [ ] topological sort
+ - [ ] Kosaraju−Sharir
+ - [ ] Kruskal
+ - [ ] Prim
+ - [ ] Dijkistra
+ - [ ] Bellman−Ford
+ - [ ] Ford−Fulkerson
+ - [ ] LSD radix sort
+ - [ ] MSD radix sort
+ - [ ] 3-way radix quicksort
+ - [ ] multiway tries
+ - [ ] ternary search tries
+ - [ ] Knuth−Morris−Pratt
+ - [ ] Boyer-Moore
+ - [ ] Rabin−Karp
+ - [ ] regular expression matching
+ - [ ] run-length coding
+ - [ ] Huffman coding
+ - [ ] LZW compression and Burrows−Wheeler transform.
 
 
 # Graphs
