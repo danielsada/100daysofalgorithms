@@ -17,8 +17,8 @@ class BreadthFirstPaths:
 
     def __init__(self, g: UGraph, s: int):
         self.queue = []
-        self.marked = [False] * g.num_V()
-        self.edgeTo = [None] * g.num_V()
+        self.marked = [False] * g.V
+        self.edgeTo = [None] * g.V
         self.s = s
         self.g = g
 

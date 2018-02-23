@@ -5,11 +5,11 @@ __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
 
 """
-Implementation of a Undirected Graph for further algorithm exercises.
+Implementation of a Directed Graph for further algorithm exercises.
 """
 
 
-class UGraph:
+class DiGraph:
     def __init__(self, v: int):
         self.V = v
         self.adj = [None]*v
@@ -18,7 +18,6 @@ class UGraph:
 
     def add_edge(self, v: int, w: int):
         self.adj[v].append(w)
-        self.adj[w].append(v)
 
     def close(self, v: int):
         return iter(self.adj[v])

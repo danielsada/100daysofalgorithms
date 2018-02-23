@@ -14,8 +14,8 @@ class DepthFirstPaths:
     """
 
     def __init__(self, g: UGraph, s: int):
-        self.marked: List[bool] = [False]*g.num_V()
-        self.edgeTo: List[int] = [None]*g.num_V()
+        self.marked: List[bool] = [False]*g.V
+        self.edgeTo: List[int] = [None]*g.V
         self.s = s
         self.dfs(g, s)
 

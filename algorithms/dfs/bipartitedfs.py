@@ -46,7 +46,7 @@ class BipartiteDFS:
 
     def check(self, g):
         if self.isBipartite:
-            for node_index in range(0, self.g.num_V()):
+            for node_index in range(0, self.g.V):
                 for adj_node in self.g.close(node_index):
                     if self.color[node_index] == self.color[adj_node]:
                         raise "Wait, this isn't bipartite"
