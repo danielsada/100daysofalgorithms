@@ -15,14 +15,16 @@ class ConnectedComponents:
     """
 
     def __init__(self, g: UGraph):
-        self.id = [None]*g.V()
-        self.marked = [False]*g.V()
+        self.id = [None]*(g.V+1)
+        self.marked = [False]*(g.V+1)
         self.curr_component = 0
         self.num_of_components = 0
-        for elem in range(0, g.V()):
+        self.g = g
+        for elem in range(0, g.V):
             if not self.marked[elem]:
                 self.dfs(g, elem)
                 self.curr_component += 1
+                self.num_of_components += 1
 
     def count(self):
         return self.num_of_components

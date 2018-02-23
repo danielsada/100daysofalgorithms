@@ -23,7 +23,7 @@ Day 4:
 
 Day 5: 
 - [x] Path between two nodes with backtracking.
-- [ ] Breath-first search
+- [x] Breath-first search (not finished)
 
 Day 6:
 - [x] Breath-first search
@@ -33,7 +33,7 @@ Day 7:
 - [x] Connected components
 
 Day 8:
-- [ ] Bipartite Graph Problem
+- [x] Bipartite Graph Problem
   
 Day 9:
 - [x] Heap
@@ -47,9 +47,12 @@ Day 11:
 - [x] Max Heap
 - [x] Heap Unit tests.
 
+Day 12: 
+- [x] Bipartite grahps
+- [x] Bipartite graph tests.
+
 NextTODOs:
 - Add tests to connected components
-- Finish Bipartite Graphs
 
 Backlog:
 - [ ] Cycle in graphs problem
