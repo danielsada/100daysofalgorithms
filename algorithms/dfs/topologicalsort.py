@@ -13,9 +13,14 @@ class TopologicalSort:
     def __init__(self, g):
         self.marked = [False] * g.V
         self.stack = []
+        self.g = g
         for i in range(0, g.V):
             if not self.marked[i]:
                 self.dfs(self.g, i)
 
-    def dfs(g, i):
-        pass
+    def dfs(self, g: DiGraph, i: int):
+        self.marked[i] = True
+        for nodes in g.close(i):
+            if not self.marked[nodes]:
+                self.dfs(g, i)
+            self.stack.append(i)
