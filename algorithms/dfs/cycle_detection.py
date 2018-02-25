@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+from algorithms.ugraph.ugraph import UGraph
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
@@ -23,5 +23,5 @@ class Cycle:
         for node in g.close(i):
             if not self.marked[node]:
                 self.dfs(g, i, node)
-            elif i != node:
+            elif i != j:
                 self.hasCycle = True

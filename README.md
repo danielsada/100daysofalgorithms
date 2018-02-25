@@ -51,16 +51,20 @@ Day 12:
 - [x] Bipartite grahps
 - [x] Bipartite graph tests.
 
-NextTODOs:
-- Add tests to connected components
+Day 13:
+- [X] Refactoring some components to use .V instead of .num_V(), more pythonic.
+- [X] Directed Graph API
+- [X] Started Topological Sort
+
+Day 14:
+- [X] Finished topological sort. (tests pending)
+- [X] Finished undirected graph cycle detection.
+- [X] Added tests to connected components.
+- [] Started directed cycle detection.  
 
 Backlog:
-- [ ] Cycle in graphs problem
 - [ ] 7 Bridges of Konnisburg
 - [ ] Hamiltonian Cycle
-- [ ] Directed Graphs API
-- [ ] Directed Graphs DFS
-- [ ] Mark-sweep algorithm
 - [ ] Directed Graphs BFS
 
 Topics to cover:
@@ -84,7 +88,7 @@ Topics to cover:
  - [ ] and kd-trees
  - [x] depth-first search
  - [x] breadth-first search
- - [ ] topological sort
+ - [x] topological sort
  - [ ] Kosaraju−Sharir
  - [ ] Kruskal
  - [ ] Prim

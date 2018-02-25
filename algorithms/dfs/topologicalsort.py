@@ -24,3 +24,6 @@ class TopologicalSort:
             if not self.marked[nodes]:
                 self.dfs(g, i)
             self.stack.append(i)
+
+    def get_order(self):
+        return self.stack.reverse()
