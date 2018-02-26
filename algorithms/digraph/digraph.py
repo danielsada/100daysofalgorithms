@@ -31,3 +31,10 @@ class DiGraph:
         for connections in G.close(v):
             Gdegree += 1
         return Gdegree
+
+    def reverse(self):
+        rev = DiGraph(self.V)
+        for v in range(0, self.V):
+            for n in self.close(v):
+                rev.add_edge(n, v)
+        return rev

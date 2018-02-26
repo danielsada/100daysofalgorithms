@@ -22,8 +22,11 @@ class TopologicalSort:
         self.marked[i] = True
         for nodes in g.close(i):
             if not self.marked[nodes]:
-                self.dfs(g, i)
-            self.stack.append(i)
+                self.dfs(g, nodes)
+        self.stack.append(i)
 
-    def get_order(self):
-        return self.stack.reverse()
+    def get_topological(self):
+        return self.stack[::-1]
+
+    def get_postorder(self):
+        return self.stack

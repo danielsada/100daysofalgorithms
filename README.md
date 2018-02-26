@@ -2,7 +2,15 @@
 
 Hello! I'm Daniel Sada. I'm trying to do an algorithm or two a day or at least try to solve a problem a day. I'll be alternating between new algorithms and working in problems with those algorithms. I'm also fairly new with python, and I want to get aquaintanced with Python3.
 
-## Day to Day log.
+# Running unit tests.
+
+Clone the project, then run:
+
+```
+python3 -m unittest discover algorithms/test -p '*.py'
+```
+
+# Day to Day log.
 
 Day 1:
 - [x] Quick Find
@@ -60,7 +68,14 @@ Day 14:
 - [X] Finished topological sort. (tests pending)
 - [X] Finished undirected graph cycle detection.
 - [X] Added tests to connected components.
-- [] Started directed cycle detection.  
+- [X] Started directed cycle detection.  
+
+Day 15:
+- [ ] Finished directed cycle detection
+- [ ] Kosajaru-Sharir algoritms for strongly connected components
+- [ ] Added tests for topological sort
+- [ ] Added reversal of directed graphs
+
 
 Backlog:
 - [ ] 7 Bridges of Konnisburg
