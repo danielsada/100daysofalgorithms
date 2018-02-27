@@ -77,15 +77,18 @@ Day 15:
 - [X] Added reversal of directed graphs
 - [X] A sample stack problem, as we are in python.
 
+Day 16:
+- [X] Binary search problem for completion.
+
+
 Problems to solve if you don't want to learn new algorithm today:
-- [ ] Binary search https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/help-fredo/
 - [ ] 7 Bridges of Konnisburg
 - [ ] Hamiltonian Cycle
 - [ ] Directed Graphs BFS
 
 Topics to cover:
  - [x] union-find
- - [ ] binary search
+ - [X] binary search
  - [x] stacks
  - [ ] queues   
  - [ ] bags
