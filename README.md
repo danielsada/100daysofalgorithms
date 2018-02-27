@@ -71,13 +71,14 @@ Day 14:
 - [X] Started directed cycle detection.  
 
 Day 15:
-- [ ] Finished directed cycle detection
-- [ ] Kosajaru-Sharir algoritms for strongly connected components
-- [ ] Added tests for topological sort
-- [ ] Added reversal of directed graphs
+- [X] Finished directed cycle detection
+- [X] Kosajaru-Sharir algoritms for strongly connected components
+- [X] Added tests for topological sort
+- [X] Added reversal of directed graphs
+- [X] A sample stack problem, as we are in python.
 
-
-Backlog:
+Problems to solve if you don't want to learn new algorithm today:
+- [ ] Binary search https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/help-fredo/
 - [ ] 7 Bridges of Konnisburg
 - [ ] Hamiltonian Cycle
 - [ ] Directed Graphs BFS
@@ -85,8 +86,8 @@ Backlog:
 Topics to cover:
  - [x] union-find
  - [ ] binary search
- - [ ] stacks
- - [ ] queues
+ - [x] stacks
+ - [ ] queues   
  - [ ] bags
  - [ ] insertion sort
  - [ ] selection sort
@@ -104,7 +105,7 @@ Topics to cover:
  - [x] depth-first search
  - [x] breadth-first search
  - [x] topological sort
- - [ ] Kosaraju−Sharir
+ - [X] Kosaraju−Sharir
  - [ ] Kruskal
  - [ ] Prim
  - [ ] Dijkistra
