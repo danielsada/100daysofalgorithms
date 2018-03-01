@@ -80,6 +80,13 @@ Day 15:
 Day 16:
 - [X] Binary search problem for completion.
 
+Day 17: 
+- [X] Created Snippets for faster coding.
+- [X] Selection Sort
+
+Day 18: 
+ - [X] insertion sort
+ - [X] shellsort
 
 Problems to solve if you don't want to learn new algorithm today:
 - [ ] 7 Bridges of Konnisburg
@@ -87,14 +94,13 @@ Problems to solve if you don't want to learn new algorithm today:
 - [ ] Directed Graphs BFS
 
 Topics to cover:
- - [x] union-find
+ - [X] union-find
  - [X] binary search
- - [x] stacks
+ - [X] stacks
  - [ ] queues   
- - [ ] bags
- - [ ] insertion sort
- - [ ] selection sort
- - [ ] shellsort
+ - [X] insertion sort
+ - [X] selection sort
+ - [X] shellsort
  - [ ] quicksort
  - [ ] 3-way quicksort
  - [ ] mergesort
@@ -128,11 +134,14 @@ Topics to cover:
  - [ ] LZW compression and Burrows−Wheeler transform.
 
 
+# Links
+## Will fill this as soon as I finish
+
 # Graphs
-## Undirected graph API [(Go to Code.)](algorithms/ugraph/ugraph.py) [(Tests)](algorithms/ugraph/ugraphtest.py)
-## Depth First Search [(Go to Code.)](algorithms/dfs/dfs.py) [(Tests)](algorithms/dfs/dfstest.py)
-## Breath First Search [(Go to Code.)](algorithms/bfs/bfs.py) [(Tests)](algorithms/bfs/bfstest.py)
-## Connected Components [(Go to Code.)](algorithms/connected_components/connected_components.py) (Tests) [Pending]
+## Undirected graph API [(Go to Code.)](algorithms/ugraph/ugraph.py) [(Tests)](algorithms/test/ugraphtest.py)
+## Depth First Search [(Go to Code.)](algorithms/dfs/dfs.py) [(Tests)](algorithms/test/dfstest.py)
+## Breath First Search [(Go to Code.)](algorithms/bfs/bfs.py) [(Tests)](algorithms/test/bfstest.py)
+## Connected Components [(Go to Code.)](algorithms/dfs/connected_components.py) [(Tests)](algorithms/test/dfstest.py)
 
 
 # Heaps
@@ -144,56 +153,6 @@ Topics to cover:
 
 # Union Find
 ## Tests for Union-Find [(Go to Tests.)](algorithms/union-find/unionfindtests.py)
-
-## Comparison: 
-```
-Worst Case Scenario
-quick-find =>  M N
-quick-union => M N
-weighted QU => N + M log N
-QU + path compression => N + M log N
-weighted QU + path compression => N + M lg* N
-
-For M union-find operations in a set of N objects.
-```
-
-
-## Quick Find [(Go to Code.)](algorithms/union-find/quickfind.py)
-
-```
-Complexity:
-Initialize => O(n)
-Union      => O(n)
-Connected  => O(1)
-```
-
-## Quick Union [(Go to Code.)](algorithms/union-find/quickunion.py)
-
-```
-Complexity:
-Initialize => O(N)
-Union      => O(N)
-Connected  => O(N)
-```
-
-## Weighted Union Find [(Go to Code.)](algorithms/union-find/weightedunionfind.py)
-
-```
-Complexity:
-Initialize => O(n)
-Union      => O(lg N)
-Connected  => O(lg N)
-```
-
 ## PathFlattened and Weighted Union Find [(Go to Code.)](algorithms/union-find/pathflattenedunionfind.py)
-
-```
-Complexity:
-Complexity:
-Initialize => O(n)
-Union      
-    => O( N + M lg* N) (about linear in practice as lg* of N^65536 is 5)
-Connected  
-    => O( N + M lg* N) (about linear in practice as lg* of N^65536 is 5)
-```
+## Weighted Union Find [(Go to Code.)](algorithms/union-find/weightedunionfind.py)
 

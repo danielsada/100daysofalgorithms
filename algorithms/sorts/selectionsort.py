@@ -29,7 +29,3 @@ class SelectionSort:
         self.arr[i] ^= self.arr[j]
         self.arr[j] ^= self.arr[i]
         self.arr[i] ^= self.arr[j]
-
-
-v = SelectionSort([0, 2, 1, 69, 3, 9])
-print(v.arr)
