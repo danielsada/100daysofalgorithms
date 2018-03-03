@@ -15,7 +15,7 @@ class WeightedGraph:
     def __init__(self, v: int):
         self.V = v
         self.adj = [None]*v
-        for i in range(0, v):
+        for i in range(0, self.V):
             self.adj[i] = []
 
     def add_edge(self, e: Edge):
@@ -29,6 +29,13 @@ class WeightedGraph:
 
     def num_E(self, v) -> int:
         return len(self.adj[v])
+
+    def edges(self):
+        edgelist = []
+        for i in range(0, self.V):
+            for e in self.adj(i):
+                edgelist.append(e)
+        return edgelist
 
     @staticmethod
     def degree(G, v):
