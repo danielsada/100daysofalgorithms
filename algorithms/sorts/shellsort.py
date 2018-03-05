@@ -12,6 +12,7 @@ class ShellSort:
     def __init__(self, arr):
         self.arr = arr
         self.shell_sort()
+        self.sorted = arr
 
     def shell_sort(self):
         h = 1

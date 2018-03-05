@@ -12,6 +12,7 @@ class SelectionSort:
     def __init__(self, arr):
         self.arr = arr
         self.selection_sort()
+        self.sorted = arr
 
     def selection_sort(self):
         index = 0

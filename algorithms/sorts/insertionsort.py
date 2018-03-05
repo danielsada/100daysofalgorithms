@@ -12,6 +12,7 @@ class InsertionSort:
     def __init__(self, arr):
         self.arr = arr
         self.insertion_sort()
+        self.sorted = self.arr
 
     def insertion_sort(self):
         i = 0
