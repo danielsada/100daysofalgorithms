@@ -3,6 +3,7 @@ from algorithms.sorts.selectionsort import SelectionSort
 from algorithms.sorts.mergesort import MergeSort
 from algorithms.sorts.insertionsort import InsertionSort
 from algorithms.sorts.shellsort import ShellSort
+from algorithms.sorts.quicksort import QuickSort
 
 
 __author__ = "Daniel Sada"
@@ -54,6 +55,14 @@ class SortingTest(unittest.TestCase):
         self.assertEqual(shellsort.sorted, [])
         shellsort = ShellSort(self.negNums)
         self.assertEqual(shellsort.sorted, self.negNumsSorted)
+
+    def test_quick_sort(self):
+        quicksort = QuickSort(self.big_arr)
+        self.assertEqual(quicksort.sorted, self.big_arr_sorted)
+        quicksort = QuickSort([])
+        self.assertEqual(quicksort.sorted, [])
+        quicksort = QuickSort(self.negNums)
+        self.assertEqual(quicksort.sorted, self.negNumsSorted)
 
 
 if __name__ == '__main__':
