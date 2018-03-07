@@ -11,10 +11,13 @@ class QuickSort:
     Implementing quicksort
     """
 
-    def __init__(self, arr):
+    def __init__(self, arr, hasPlentyOfEqualElements=False):
         self.arr = arr
         random.shuffle(self.arr)
-        self.sorted = self.quicksort(self.arr)
+        if(hasPlentyOfEqualElements):
+            self.sorted = self.three_way_quicksort(self.arr)
+        else:
+            self.sorted = self.quicksort(self.arr)
 
     # Thanks to gist by https://github.com/catovermoon
 
@@ -25,3 +28,13 @@ class QuickSort:
         less = [i for i in lst[1:] if i <= pivot]
         greater = [i for i in lst[1:] if i > pivot]
         return self.quicksort(less) + [pivot] + self.quicksort(greater)
+
+    def three_way_quicksort(self, lst):
+        if len(lst) <= 1:
+            return lst
+        pivot = lst[0]
+        mid = [i for i in lst[1:] if i == pivot]
+        less = [i for i in lst[1:] if i < pivot]
+        greater = [i for i in lst[1:] if i > pivot]
+        mid.append(pivot)
+        return self.quicksort(less) + mid + self.quicksort(greater)

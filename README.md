@@ -60,33 +60,52 @@ Day 12:
 - [x] Bipartite graph tests.
 
 Day 13:
-- [X] Refactoring some components to use .V instead of .num_V(), more pythonic.
-- [X] Directed Graph API
-- [X] Started Topological Sort
+- [x] Refactoring some components to use .V instead of .num_V(), more pythonic.
+- [x] Directed Graph API
+- [x] Started Topological Sort
 
 Day 14:
-- [X] Finished topological sort. (tests pending)
-- [X] Finished undirected graph cycle detection.
-- [X] Added tests to connected components.
-- [X] Started directed cycle detection.  
+- [x] Finished topological sort. (tests pending)
+- [x] Finished undirected graph cycle detection.
+- [x] Added tests to connected components.
+- [x] Started directed cycle detection.  
 
 Day 15:
-- [X] Finished directed cycle detection
-- [X] Kosajaru-Sharir algoritms for strongly connected components
-- [X] Added tests for topological sort
-- [X] Added reversal of directed graphs
-- [X] A sample stack problem, as we are in python.
+- [x] Finished directed cycle detection
+- [x] Kosajaru-Sharir algoritms for strongly connected components
+- [x] Added tests for topological sort
+- [x] Added reversal of directed graphs
+- [x] A sample stack problem, as we are in python.
 
 Day 16:
-- [X] Binary search problem for completion.
+- [x] Binary search problem for completion.
 
 Day 17: 
-- [X] Created Snippets for faster coding.
-- [X] Selection Sort
+- [x] Created Snippets for faster coding.
+- [x] Selection Sort
 
 Day 18: 
- - [X] insertion sort
- - [X] shellsort
+ - [x] insertion sort
+ - [x] shellsort
+
+Day 19:
+ - [x] Weighted Graph and Edge API and 
+ - [x] Minimum Spanning Trees API. 
+
+Day 20:
+- [x] Kruskal's implementation for finding the Minimum Spanning Tree of a Weighted Graph. 
+
+Day 21:
+- [x] Mergesort implemented specifically for python.
+
+Day 22:
+- [x] Sorting tests for shell sort, insertion sort, selection sort, etc. Standardize all sorts to have the same property .sorted
+
+Day 23:
+- [x] Quicksort
+
+Day 24: 
+- [x] Three way quicksort 
 
 Problems to solve if you don't want to learn new algorithm today:
 - [ ] 7 Bridges of Konnisburg
@@ -94,16 +113,16 @@ Problems to solve if you don't want to learn new algorithm today:
 - [ ] Directed Graphs BFS
 
 Topics to cover:
- - [X] union-find
- - [X] binary search
- - [X] stacks
+ - [x] union-find
+ - [x] binary search
+ - [x] stacks
  - [ ] queues   
- - [X] insertion sort
- - [X] selection sort
- - [X] shellsort
- - [ ] quicksort
- - [ ] 3-way quicksort
- - [ ] mergesort
+ - [x] insertion sort
+ - [x] selection sort
+ - [x] shellsort
+ - [x] quicksort
+ - [x] 3-way quicksort
+ - [x] mergesort
  - [ ] heapsort
  - [ ] binary heaps
  - [ ] binary search trees
@@ -114,8 +133,8 @@ Topics to cover:
  - [x] depth-first search
  - [x] breadth-first search
  - [x] topological sort
- - [X] Kosaraju−Sharir
- - [ ] Kruskal
+ - [x] Kosaraju−Sharir
+ - [x] Kruskal
  - [ ] Prim
  - [ ] Dijkistra
  - [ ] Bellman−Ford

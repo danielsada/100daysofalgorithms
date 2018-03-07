@@ -64,6 +64,14 @@ class SortingTest(unittest.TestCase):
         quicksort = QuickSort(self.negNums)
         self.assertEqual(quicksort.sorted, self.negNumsSorted)
 
+    def test_three_way_quick_sort(self):
+        quicksort = QuickSort(self.big_arr, True)
+        self.assertEqual(quicksort.sorted, self.big_arr_sorted)
+        quicksort = QuickSort([], True)
+        self.assertEqual(quicksort.sorted, [])
+        quicksort = QuickSort(self.negNums, True)
+        self.assertEqual(quicksort.sorted, self.negNumsSorted)
+
 
 if __name__ == '__main__':
     unittest.main()
