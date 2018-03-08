@@ -16,7 +16,7 @@ class UnorderedPriorityQueue:
     def insert(self, elem):
         self.queue.append(elem)
 
-    def popMax(self):
+    def pop(self):
         pass
         # if self.tupled:
         #     pass

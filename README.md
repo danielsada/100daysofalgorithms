@@ -105,7 +105,12 @@ Day 23:
 - [x] Quicksort
 
 Day 24: 
-- [x] Three way quicksort 
+- [x] Dijkstra's Three way quicksort 
+
+Day 25:
+- [x] Added priority queue.er (Which is only a Max Heap that implements total ording) 
+- [x] Implemented tupled ordering in max heap to make max heap usable for a priority queue. 
+- [x] Added tests for max heaps with tuples and priority queues.
 
 Problems to solve if you don't want to learn new algorithm today:
 - [ ] 7 Bridges of Konnisburg

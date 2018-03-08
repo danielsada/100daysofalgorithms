@@ -1,6 +1,7 @@
 from algorithms.heaps.heap import Heap
 from algorithms.heaps.minheap import MinHeap
 from algorithms.heaps.maxheap import MaxHeap
+from algorithms.priorityqueue.priorityqueue import PriorityQueue
 import unittest
 
 
@@ -9,6 +10,8 @@ class TestHeaps(unittest.TestCase):
         self.gHeap = Heap()
         self.mh = MinHeap()
         self.mxh = MaxHeap()
+        self.mxht = MaxHeap(tupled=True)
+        self.pq = PriorityQueue()
 
     def test_generic_heap(self):
         """
@@ -50,6 +53,22 @@ class TestHeaps(unittest.TestCase):
         self.assertEqual(self.mxh.pop(), 40)
         self.assertEqual(self.mxh.pop(), 30)
         self.assertEqual(self.mxh.pop(), 20)
+
+    def test_tupled_queues(self):
+        self.mxht.push((False, 3))
+        self.mxht.push(("far", 1000))
+        self.mxht.push(("wow", 100))
+        self.assertEqual(self.mxht.pop(), ("far", 1000))
+        self.assertEqual(self.mxht.pop(), ("wow", 100))
+        self.assertEqual(self.mxht.pop(), (False, 3))
+
+    def test_priority_queue(self):
+        arr = [1, 200, 2, 3, 5, 6]
+        for e in arr:
+            self.pq.add(e)
+        self.assertEqual(self.pq.pop(), 200)
+        self.assertEqual(self.pq.pop(), 6)
+        self.assertEqual(self.pq.pop(), 5)
 
 
 if __name__ == '__main__':
