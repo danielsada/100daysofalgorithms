@@ -14,12 +14,27 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
-    def put(self, elem: tuple):
-        pass
+    def put(self, item: tuple):
+        self.root = self.put_rec(self.root, item)
+
+    def put_rec(self, node: BSTNode,  item: tuple) -> BSTNode:
+        if node == None:
+            return BSTNode(item)
+
+        k = item[0]
+        n_key = node.item[0]
+
+        if k < n_key:
+            node.left = self.put_rec(node.left, item)
+        elif k > n_key:
+            node.right = self.put_rec(node.right, item)
+        else:
+            node.item = item
+        return node
 
     """Returns None if not present"""
 
-    def get(self, key) -> tuple | None:
+    def get(self, key):
         x = self.root
         while x != None:
             if x.item[0] > key:
