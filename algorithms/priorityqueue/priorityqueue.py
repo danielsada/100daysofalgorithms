@@ -25,10 +25,3 @@ class PriorityQueue:
         return self.pq.peek()
 
 
-pq = PriorityQueue()
-arr = [1, 200, 2, 3, 5, 6]
-for e in arr:
-    pq.add(e)
-print(pq.pop())
-print(pq.pop())
-print(pq.pop())
