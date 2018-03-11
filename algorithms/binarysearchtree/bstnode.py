@@ -13,3 +13,4 @@ class BSTNode:
         self.left = None
         self.right = None
         self.item = item
+        self.count = None

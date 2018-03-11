@@ -5,7 +5,7 @@ __email__ = "yo@danielsada.mx"
 
 
 class InsertionSort:
-    """"
+    """
     Creating a class that implements selection sort
     """
 
