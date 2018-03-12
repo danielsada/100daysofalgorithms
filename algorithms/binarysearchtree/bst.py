@@ -13,6 +13,23 @@ class BinarySearchTree:
 
     def __init__(self):
         self.root = None
+        self.inorder_arr = []
+
+    def __iter__(self):
+        self.i = 0
+        self._inorderhelper(self.root)
+
+    def __next__(self):
+        if self.i > len(self.inorder_arr) - 1:
+            raise StopIteration
+        return self.inorder_arr[self.i]
+
+    def _inorderhelper(self, node: BSTNode):
+        if node == None:
+            return
+        self._inorderhelper(node.left)
+        self.inorder_arr.append(node.item)
+        self._inorderhelper(node.right)
 
     def put(self, item: tuple):
         self.root = self._put_helper(self.root, item)
@@ -112,8 +129,20 @@ class BinarySearchTree:
             return self.root.count
         return node.count
 
-    def iterable(self, key) -> iter:
-        pass
+    def rank(self, item):
+        return self._rankhelper(item, self.root)
+
+    def _rankhelper(self, item, node):
+        if node == None:
+            return 0
+        _, v = node.item
+        _, vo = item
+        if v < vo:
+            return self._rankhelper(item, node.left)
+        if v > vo:
+            return 1 + self.size(node.left) + self._rankhelper(item, node.right)
+        else:
+            return self.size(node.left)
 
 
 # Alternative solution for floor:
