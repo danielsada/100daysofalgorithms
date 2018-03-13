@@ -18,11 +18,16 @@ class BinarySearchTree:
     def __iter__(self):
         self.i = 0
         self._inorderhelper(self.root)
+        return self
+        
+
 
     def __next__(self):
         if self.i > len(self.inorder_arr) - 1:
             raise StopIteration
-        return self.inorder_arr[self.i]
+        ret = self.inorder_arr[self.i]
+        self.i += 1
+        return ret
 
     def _inorderhelper(self, node: BSTNode):
         if node == None:
@@ -47,11 +52,7 @@ class BinarySearchTree:
             node.right = self._put_helper(node.right, item)
         else:
             node.item = item
-        sz_node_right = self.size(node.right) if self.size(
-            node.right) != None else 0
-        sz_node_left = self.size(node.left) if self.size(
-            node.left) != None else 0
-        node.count = 1 + sz_node_left + sz_node_right
+        node.count = self._compute_size(node);
         return node
 
     """Returns None if not present"""
@@ -66,10 +67,7 @@ class BinarySearchTree:
             else:
                 return x.item
         return None
-
-    def delete(self, key):
-        pass
-
+ 
     def max_elem(self):
         elem = self.root
         while elem != None and elem.right != None:
@@ -95,7 +93,7 @@ class BinarySearchTree:
         _, vo = item
         if v == vo:
             return node
-        if vo < v:
+        if v < vo:
             return self._floorhelper(node.left, item)
         t = self._floorhelper(node.right, item)
         if t != None:
@@ -116,7 +114,7 @@ class BinarySearchTree:
         _, vo = item
         if v == vo:
             return node
-        if vo < v:
+        if v > vo:
             t = self._ceilinghelper(node.right, item)
             if t != None:
                 return t
@@ -143,6 +141,67 @@ class BinarySearchTree:
             return 1 + self.size(node.left) + self._rankhelper(item, node.right)
         else:
             return self.size(node.left)
+
+    def deleteMin(self):
+        self._deleteminhelper(self.root)
+    
+    def _deleteminhelper(self, node):
+        if node.left == None:
+            return node.right
+        node.left = self._deleteminhelper(node.left);
+        node.count = self._compute_size(node)
+        return node
+
+    def delete(self, item):
+        self._delete(self.root, item)
+    
+    def _delete(self, node, item):
+        if node == None:
+            return None
+        _, v = node.item
+        _, vo = item
+        if v < vo:
+            node.left = self._delete(node.left,item)
+        elif v > vo:
+            node.right = self._delete(node.right, item)
+        else:
+            if node.right == None:
+                return node.left
+            if node.left == None:
+                return node.right
+            tempNode = node
+            node = self._minelemfromNode(tempNode.right)
+            node.right = self._deleteminhelper(node)
+            node.left = tempNode.left
+        node.count = self._compute_size(node)
+        return node
+        
+    def _minelemfromNode(self, node):
+        if node.left == None: 
+            return node
+        else:
+            return self._minelemfromNode(node.left)
+            
+
+    def _compute_size(self, node):
+        sz_node_right = self.size(node.right) if self.size(
+            node.right) != None else 0
+        sz_node_left = self.size(node.left) if self.size(
+            node.left) != None else 0
+        return 1 + sz_node_left + sz_node_right
+
+
+bst = BinarySearchTree();
+bst.put((0,'a'))
+bst.put((1,'c'))
+bst.put((2,'j'))
+print(bst.min_elem())
+print(bst.max_elem())
+bst.deleteMin()
+print(bst.min_elem())
+print(bst.rank((1,'c')))
+print(bst.ceiling((2,'d')))
+print(bst.floor((1,'d')))
 
 
 # Alternative solution for floor:

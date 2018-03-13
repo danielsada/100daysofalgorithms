@@ -28,6 +28,16 @@ class BSTTest(unittest.TestCase):
         _, minx = self.secondbst.min_elem()
         self.assertEqual(mx, 'z')
         self.assertEqual(minx, 'a')
+        for el in self.secondbst:
+            print(el, end='')
+        print('\n')
+        print('\n')
+        self.secondbst.deleteMin();
+        self.secondbst.deleteMin();
+        for el in self.secondbst:
+            print(el, end='')
+        self.assertEqual(minx, 'b')
+        
 
     @unittest.skip("""TODO: Improve this, this actually doesn't work quite well for this purpose
     Build another syntax tree.
