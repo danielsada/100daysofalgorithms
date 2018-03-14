@@ -16,6 +16,11 @@ class BSTTest(unittest.TestCase):
         self.secondbst = BinarySearchTree()
         for k, v in enumerate(list(map(chr, range(97, 123)))):
             self.secondbst.put((k, v))
+        self.thirdbst = BinarySearchTree()
+        self.thirdbst.put(('a', "wowfriend"))
+        self.thirdbst.put(('d',"more friendo"))
+        self.thirdbst.put(('j',"incredible"))
+
 
     def test_all_letters(self):
         for k, _ in enumerate(list(map(chr, range(97, 123)))):
@@ -23,34 +28,32 @@ class BSTTest(unittest.TestCase):
         for k, _ in enumerate(list(map(chr, range(124, 200)))):
             self.assertIsNone(self.bst.get(k))
 
+
+    """Test min and max elements of a bst"""
     def test_min_max(self):
         _, mx = self.secondbst.max_elem()
         _, minx = self.secondbst.min_elem()
         self.assertEqual(mx, 'z')
         self.assertEqual(minx, 'a')
-        for el in self.secondbst:
-            print(el, end='')
-        print('\n')
-        print('\n')
         self.secondbst.deleteMin();
         self.secondbst.deleteMin();
-        for el in self.secondbst:
-            print(el, end='')
-        self.assertEqual(minx, 'b')
+        _, minx = self.secondbst.min_elem()
+        self.assertEqual(minx, 'c')
+
+
+    """Test size. Size returns the amount of nodes rooted below a node."""
+    def test_size(self):
+        self.assertEqual(self.thirdbst.size_at_root(), 2)
         
 
-    @unittest.skip("""TODO: Improve this, this actually doesn't work quite well for this purpose
-    Build another syntax tree.
-    """)
+    """Gives the closest node (down) to myself"""
     def test_floor(self):
-        self.assertEqual(self.secondbst.floor((23, 'x'))[1], 'x')
+        self.assertEqual(self.thirdbst.floor('e'), ('d',"more friendo"))
         # self.assertEqual(minx, 'a')
 
-    @unittest.skip("""TODO: Improve this, this actually doesn't work quite well for this purpose
-    Build another syntax tree.
-    """)
+    """Gives the closest node (up) to myself"""
     def test_ceiling(self):
-        self.assertEqual(self.secondbst.ceiling((23, 'x'))[1], 'x')
+        self.assertEqual(self.thirdbst.ceiling('e'), ('j',"incredible"))
 
     def test_some_equal_elements(self):
         for _, v in enumerate(list(map(chr, range(97, 123)))):
