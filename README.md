@@ -112,29 +112,50 @@ Day 25:
 - [x] Implemented tupled ordering in max heap to make max heap usable for a priority queue. 
 - [x] Added tests for max heaps with tuples and priority queues.
 
+Day 26:
+- [x] Started working on Binary Search Trees and Symbol tables. 
+
+Day 27:
+- [x] Finished Binary Search Tree get and put implementations, 
+- [x] Added some unit tests for bst
+
+Day 28:
+- [x] Added ceiling, floor min and max to bst.
+
+Day 29:
+- [x] Added python iterators
+- [x] Started rank
+
+Day 30:
+- [x] Started working on hibbard's deletion for binary search trees
+- [x] adding some unit tests, debugging some bugs.
+
+Day 31:
+- [x] Bugfixing, bst methods should take keys, not items.
+- [x] Added more unit tests.
+
 Problems to solve if you don't want to learn new algorithm today:
 - [ ] 7 Bridges of Konnisburg
 - [ ] Hamiltonian Cycle
-- [ ] Directed Graphs BFS
 
 Topics to cover:
  - [x] union-find
  - [x] binary search
  - [x] stacks
- - [ ] queues   
+ - [x] queues   
  - [x] insertion sort
  - [x] selection sort
  - [x] shellsort
  - [x] quicksort
  - [x] 3-way quicksort
  - [x] mergesort
- - [ ] heapsort
- - [ ] binary heaps
+ - [x] heapsort
+ - [x] binary heaps
  - [ ] binary search trees
  - [ ] red−black trees
  - [ ] separate chaining and linear probing hash tables
  - [ ] Graham scan
- - [ ] and kd-trees
+ - [ ]  kd-trees
  - [x] depth-first search
  - [x] breadth-first search
  - [x] topological sort
