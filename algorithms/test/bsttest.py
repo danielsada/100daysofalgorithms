@@ -60,6 +60,15 @@ class BSTTest(unittest.TestCase):
             self.bst.put((chr(97), v))
         self.assertIsNotNone(self.bst.get(chr(97)))
 
+    def test_deletion(self):
+        test = BinarySearchTree()
+        test.put(('a', "www"))
+        test.put(('e', "www.e"))
+        test.put(('w', "www.w"))
+        test.delete('e')
+        for el in test:
+            print(el)
+
 
 if __name__ == '__main__':
     unittest.main()

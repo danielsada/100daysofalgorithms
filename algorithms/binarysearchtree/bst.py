@@ -125,19 +125,6 @@ class BinarySearchTree:
     def size_at_root(self):
         return  self.size(self.root);           
 
-    def rank(self, key):
-        return self._rankhelper(self.root, key)
-
-    def _rankhelper(self, node, key):
-        if node == None:
-            return 0
-        xk,_ = node.item
-        if key < xk:
-            return self._rankhelper(node.left, key)
-        if key > xk:
-            return 1 + self.size(node.left) + self._rankhelper(node.right, key)
-        else:
-            return self.size(node.left)
 
     def deleteMin(self):
         self.root = self._deleteminhelper(self.root)
@@ -149,18 +136,18 @@ class BinarySearchTree:
         node.count = self._compute_size(node)
         return node
 
-    def delete(self, item):
-        self._delete(self.root, item)
+    def delete(self, key):
+        self._delete(self.root, key)
     
-    def _delete(self, node, item):
+    def _delete(self, node, key):
         if node == None:
             return None
-        v,_ = node.item
-        vo,_ = item
-        if v < vo:
-            node.left = self._delete(node.left,item)
-        elif v > vo:
-            node.right = self._delete(node.right, item)
+        xk,_ = node.item
+        
+        if key < xk:
+            node.left = self._delete(node.left,key)
+        elif key > xk:
+            node.right = self._delete(node.right, key)
         else:
             if node.right == None:
                 return node.left
@@ -187,6 +174,8 @@ class BinarySearchTree:
         sz_node_left = self.size(node.left) if self.size(
             node.left) != None else 0
         return 1 + sz_node_left + sz_node_right
+
+
 
 
 # Alternative solution for floor:
