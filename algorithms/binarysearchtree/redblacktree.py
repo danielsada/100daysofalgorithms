@@ -41,13 +41,104 @@ class RBT: #Red Black Tree
         if node is None:
             return False
 
+    def _rotate_left(self, node: RBTNode):
+        assert self.isRed(node.right)
+        child_node:RBTNode = node.right
+        node.right = child_node.left
+        child_node.left = node
+        child_node.color = node.color
+        node.color = self.RED
+        return child_node
+    
+    def  _rotate_right(self, node:RBTNode):
+        assert self.isRed(node.left)
+        child_node : RBTNode = node.left
+        node.left = child_node.right
+        child_node.right = node
+        child_node.color = node.color
+        node.color = self.RED
+        return child_node
+
+    def _flip_colors(self, node:RBTNode):
+        assert not self.isRed(node)
+        assert self.isRed(node.right)
+        assert self.isRed(node.left)
+        node.color = self.RED
+        node.left.color = self.BLACK
+        node.right.color = self.BLACK
 
     def put(self, item: tuple):
         self.root = self._put_helper(self.root, item)
+        self.root.color = self.BLACK
 
     def _put_helper(self, node: RBTNode,  item: tuple) -> RBTNode:
         if node == None:
             return RBTNode(item, RBT.RED)
+        xk,_ = node.item
+        k,_ = item
+        if k < xk:
+            node.left = self._put_helper(node.left, item)
+        elif k > xk:
+            node.right = self._put_helper(node.right, item)
+        else:
+            node.item = item
+        
+        if self.isRed(node.right) and not self.isRed(node.left):
+            node = self._rotate_left(node)
+        if self.isRed(node.left) and self.isRed(node.left.left):
+            node = self._rotate_right(node)
+        if self.isRed(node.left) and self.isRed(node.right):
+            node = self._flip_colors(node)
+        
+        return node
+        
+    def delete(self, key):
+        assert key != None
+        if not self.isRed(self.root.left) and not self.isRed(self.root.right):
+            self.root.color = self.RED
+        self.root = self._delete_helper(self.root, key)
+
+    def _delete_helper(self, node:RBTNode, key):
+        hk,_ = node
+        if key < hk:
+            if not self.isRed(node.left) and not self.isRed(node.left.left):
+                pass
+            pass
+        pass
+
+    def _moveRedLeft(self, node):
+        assert node != None
+        assert self.isRed(node) and not self.isRed(node.left) and not self.isRed(node.left.left)
+        node = self._flip_colors(node)
+        if not self.isRed(node.right.left):
+            node.right = self._rotate_right(node.right)
+            node = self._rotate_left(node)
+            node = self._flip_colors(node)
+        return node
+
+    def _moveRedRight(self, node):
+        assert node != None
+        assert self.isRed(node) and not self.isRed(node.right) and not self.isRed(node.right.left)
+        node = self._flip_colors(node)
+        if self.isRed(node.left.left):
+            node = self._rotate_right(node)
+            node = self._flip_colors(node)
+        return node
     
+    def _balance(self):
+        pass
+
+    """Returns None if not present"""
+
+    def get(self, key):
+        x = self.root
+        while x != None:
+            if x.item[0] > key:
+                x = x.left
+            elif x.item[0] < key:
+                x = x.right
+            else:
+                return x.item
+        return None
 
    
