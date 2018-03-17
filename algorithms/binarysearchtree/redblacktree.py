@@ -98,13 +98,26 @@ class RBT: #Red Black Tree
             self.root.color = self.RED
         self.root = self._delete_helper(self.root, key)
 
-    def _delete_helper(self, node:RBTNode, key):
-        hk,_ = node
+    def _delete_helper(self, h:RBTNode, key):
+        hk,_ = h
         if key < hk:
-            if not self.isRed(node.left) and not self.isRed(node.left.left):
-                pass
-            pass
-        pass
+            if not self.isRed(h.left) and not self.isRed(h.left.left):
+                h = self._moveRedLeft(h)
+            h.left = self._delete_helper(h.left, key)
+        else:
+            if self.isRed(h.left):
+                h = self._rotate_right(h)
+            if key == hk and h.right == None:
+                return None
+            if not self.isRed(h.right) and not self.isRed(h.right.left):
+                h = self._moveRedRight(h)
+            if key == hk:
+                x : RBTNode = self.minimum(h.right)
+                h.item = x.item
+                h.right = self.delete_minimum(h.right)
+            else:
+                h.right = self._delete_helper(h.right, key)
+        return self._balance(h)
 
     def _moveRedLeft(self, node):
         assert node != None
@@ -125,8 +138,36 @@ class RBT: #Red Black Tree
             node = self._flip_colors(node)
         return node
     
-    def _balance(self):
-        pass
+    def minimum(self, node):
+        if node.left == None:
+            return node
+        else:
+            return node.left
+
+    def delete_minimum(self, node):
+        if node.left == None:
+            return None
+        if self.isRed(node.left) and not self.isRed(node.left.left):
+            node = self._moveRedLeft(node)
+        node.left = self.delete_minimum(node.left)
+        return self._balance(node)
+
+
+    def _balance(self, node):
+        if self.isRed(node.right):
+            node = self._rotate_left(node)
+        if self.isRed(node.left) and self.isRed(node.left.left):
+            node = self._rotate_right(node)
+        if self.isRed(node.left) and self.isRed(node.right):
+            node = self._flip_colors(node)
+        node.count = 1 + self.size(node.left) + self.size(node.right)
+        return node
+        
+
+    def size(self, node):
+        if node == None or node.count == None:
+            return 0
+        return node.count
 
     """Returns None if not present"""
 
