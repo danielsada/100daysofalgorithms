@@ -1,3 +1,4 @@
+import math
 """
 Fredo is assigned a task today. He is given an array A containing N integers.
 His task is to update all elements of array to some minimum value x, that is, A[i] = x, 1 <= i <= N
@@ -25,28 +26,29 @@ print('Hi, %s.' % name)         # Writing output to STDOUT
 '''
 
 
-def binary_multiply(low, high, N, mult):
+def binaryMultiply(low, high, N, mult):
     if low+1 == high or low == high:
         return low
     else:
         mid = low + ((high - low) // 2)
         pw = mid ** N
         if pw > mult:
-            return binary_multiply(low, mid, N, mult)
+            return binaryMultiply(low, mid, N, mult)
         else:
-            return binary_multiply(mid, high, N, mult)
+            return binaryMultiply(mid, high, N, mult)
 
 
-from functools import reduce
-import math
+def main():
+    N = int(input())
+    A = list(map(int, input().split(" ")))
+    p = 1
 
-N = int(input())
-A = list(map(int, input().split(" ")))
-p = 1
+    for elems in A:
+        p *= elems**(1/N)
 
-for elems in A:
-    p *= elems**(1/N)
+    if p == 1:
+        p += 1
+    print(math.ceil(p))
 
-if p == 1:
-    p += 1
-print(math.ceil(p))
+
+main()

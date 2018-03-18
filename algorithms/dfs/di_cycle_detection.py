@@ -18,7 +18,7 @@ class DiCycle:
         self.cycle = []
         self.hasCycle = lambda: len(self.cycle) == 0
         for s in range(0, g.V):
-            if not self.marked[s] and len(self.cycle) == 0:
+            if not self.marked[s] and self.cycle:
                 self.dfs(g, s)
 
     def dfs(self, g: DiGraph, i: int):

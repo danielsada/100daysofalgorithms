@@ -18,9 +18,8 @@ class BSTTest(unittest.TestCase):
             self.secondbst.put((k, v))
         self.thirdbst = BinarySearchTree()
         self.thirdbst.put(('a', "wowfriend"))
-        self.thirdbst.put(('d',"more friendo"))
-        self.thirdbst.put(('j',"incredible"))
-
+        self.thirdbst.put(('d', "more friendo"))
+        self.thirdbst.put(('j', "incredible"))
 
     def test_all_letters(self):
         for k, _ in enumerate(list(map(chr, range(97, 123)))):
@@ -28,32 +27,29 @@ class BSTTest(unittest.TestCase):
         for k, _ in enumerate(list(map(chr, range(124, 200)))):
             self.assertIsNone(self.bst.get(k))
 
-
-    """Test min and max elements of a bst"""
     def test_min_max(self):
-        _, mx = self.secondbst.max_elem()
-        _, minx = self.secondbst.min_elem()
+        """Test min and max elements of a bst"""
+        _, mx = self.secondbst.getMaxElem()
+        _, minx = self.secondbst.getMinElem()
         self.assertEqual(mx, 'z')
         self.assertEqual(minx, 'a')
-        self.secondbst.deleteMin();
-        self.secondbst.deleteMin();
-        _, minx = self.secondbst.min_elem()
+        self.secondbst.deleteMin()
+        self.secondbst.deleteMin()
+        _, minx = self.secondbst.getMinElem()
         self.assertEqual(minx, 'c')
 
-
-    """Test size. Size returns the amount of nodes rooted below a node."""
     def test_size(self):
-        self.assertEqual(self.thirdbst.size_at_root(), 2)
-        
+        """Test size. Size returns the amount of nodes rooted below a node."""
+        self.assertEqual(self.thirdbst.sizeAtRoot(), 2)
 
-    """Gives the closest node (down) to myself"""
     def test_floor(self):
-        self.assertEqual(self.thirdbst.floor('e'), ('d',"more friendo"))
+        """Gives the closest node (down) to myself"""
+        self.assertEqual(self.thirdbst.floor('e'), ('d', "more friendo"))
         # self.assertEqual(minx, 'a')
 
-    """Gives the closest node (up) to myself"""
     def test_ceiling(self):
-        self.assertEqual(self.thirdbst.ceiling('e'), ('j',"incredible"))
+        """Gives the closest node (up) to myself"""
+        self.assertEqual(self.thirdbst.ceiling('e'), ('j', "incredible"))
 
     def test_some_equal_elements(self):
         for _, v in enumerate(list(map(chr, range(97, 123)))):
@@ -66,8 +62,6 @@ class BSTTest(unittest.TestCase):
         test.put(('e', "www.e"))
         test.put(('w', "www.w"))
         test.delete('e')
-        for el in test:
-            print(el)
 
 
 if __name__ == '__main__':

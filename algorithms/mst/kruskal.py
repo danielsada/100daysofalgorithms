@@ -1,5 +1,4 @@
 from algorithms.unionfind.weightedunionfind import WeightedUnionFind
-from algorithms.heaps.minheap import MinHeap
 from algorithms.mst.mst import MST
 from algorithms.weightedgraph.weightedgraph import WeightedGraph
 from algorithms.weightedgraph.edge import Edge
@@ -28,7 +27,7 @@ class Kruskal:
         self.uf = WeightedUnionFind(self.g.V)
 
     def kruskal(self):
-        while len(self.edges) > 0 and len(self.mst.edgelist) < self.g.v - 1:
+        while self.edges and len(self.mst.edgelist) < self.g.v - 1:
             pop_elem: Edge = self.edges.pop()
             a: int = pop_elem.either()
             b: int = pop_elem.other(a)

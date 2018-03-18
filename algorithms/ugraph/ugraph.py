@@ -16,14 +16,14 @@ class UGraph:
         for i in range(0, v):
             self.adj[i] = []
 
-    def add_edge(self, v: int, w: int):
+    def addEdge(self, v: int, w: int):
         self.adj[v].append(w)
         self.adj[w].append(v)
 
     def close(self, v: int):
         return iter(self.adj[v])
 
-    def num_E(self, v) -> int:
+    def numEdges(self, v) -> int:
         return len(self.adj[v])
 
     @staticmethod

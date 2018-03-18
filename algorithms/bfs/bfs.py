@@ -1,5 +1,6 @@
+"""Binary First Search"""
+
 from algorithms.ugraph import UGraph
-from typing import List
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
@@ -24,7 +25,7 @@ class BreadthFirstPaths:
 
         self.marked[s] = True
         self.queue.append(s)
-        while len(self.queue) != 0:
+        while self.queue:
             current_item = self.queue.pop()
             for elem in self.g.close(current_item):
                 if not self.marked[elem]:
@@ -45,6 +46,3 @@ class BreadthFirstPaths:
             init = self.edgeTo[init]
         path.append(self.s)
         return path
-
-
-# 72

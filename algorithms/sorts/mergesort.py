@@ -10,12 +10,13 @@ class MergeSort:
     """
 
     def __init__(self, arrToSort):
-        self.sorted = self.merge_sort(arrToSort)
+        self.sorted = self.mergeSort(arrToSort)
 
-    def merge(self, left, right):
-        if left == None or len(left) == 0:
+    @staticmethod
+    def merge(left, right):
+        if left is None or len(left) == 0:  # pylint: disable=C1801
             return right
-        if right == None or len(right) == 0:
+        if right is None or len(right) == 0:  # pylint: disable=C1801
             return left
         res = []
         i = 0
@@ -33,14 +34,10 @@ class MergeSort:
                 res.extend(left[i:])
         return res
 
-    def merge_sort(self, arr):
+    def mergeSort(self, arr):
         if len(arr) < 2:
             return arr
         mid = len(arr)//2
-        lf = self.merge_sort(arr[0:mid])
-        rg = self.merge_sort(arr[mid:len(arr)])
+        lf = self.mergeSort(arr[0:mid])
+        rg = self.mergeSort(arr[mid:len(arr)])
         return self.merge(lf, rg)
-
-
-x = MergeSort([2, 3, 4, 1, 5, 8])
-print("Teoretically ", x.sorted)

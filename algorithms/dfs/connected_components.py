@@ -1,5 +1,4 @@
 from algorithms.ugraph import UGraph
-from typing import List
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
@@ -29,7 +28,7 @@ class ConnectedComponents:
     def count(self):
         return self.num_of_components
 
-    def ID(self, v: int):
+    def getId(self, v: int):
         return self.id[v]
 
     def dfs(self, g: UGraph, v: int):

@@ -11,19 +11,19 @@ class ShellSort:
 
     def __init__(self, arr):
         self.arr = arr
-        self.shell_sort()
+        self.shellSort()
         self.sorted = arr
 
-    def shell_sort(self):
+    def shellSort(self):
         h = 1
         while h < len(self.arr)/3:
             h = 3*h + 1
-        while(h >= 1):
+        while h >= 1:
             i = 0
             while i < len(self.arr):
                 for j in range(i, 0, -h):
                     if j != 0:
-                        if(self.arr[j-h] > self.arr[j]):
+                        if self.arr[j-h] > self.arr[j]:
                             self.swap(j, j-h)
                 i += 1
             h = h // 3

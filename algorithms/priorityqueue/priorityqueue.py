@@ -9,6 +9,7 @@ __email__ = "yo@danielsada.mx"
 class PriorityQueue:
     """"
     A priority queue made with a max heap. It is performant.
+    This is a proxy for a MaxHeap
     """
 
     def __init__(self, tupled=False):
@@ -23,5 +24,3 @@ class PriorityQueue:
 
     def peek(self):
         return self.pq.peek()
-
-

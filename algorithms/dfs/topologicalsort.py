@@ -25,8 +25,8 @@ class TopologicalSort:
                 self.dfs(g, nodes)
         self.stack.append(i)
 
-    def get_topological(self):
+    def getTopological(self):
         return self.stack[::-1]
 
-    def get_postorder(self):
+    def getPostorder(self):
         return self.stack

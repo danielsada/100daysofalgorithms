@@ -23,18 +23,18 @@ class TestDFS(unittest.TestCase):
     def setUp(self):
         self.pairs = UGraph(100)
         for x in range(0, 98, 2):
-            self.pairs.add_edge(x, x+2)
+            self.pairs.addEdge(x, x+2)
         graph = UGraph(4)
-        graph.add_edge(0, 1)
-        graph.add_edge(1, 2)
-        graph.add_edge(2, 3)
+        graph.addEdge(0, 1)
+        graph.addEdge(1, 2)
+        graph.addEdge(2, 3)
         self.bipartite = BipartiteDFS(graph)
         nonbiGraph = UGraph(4)
-        nonbiGraph.add_edge(0, 1)
-        nonbiGraph.add_edge(1, 2)
-        nonbiGraph.add_edge(2, 3)
-        nonbiGraph.add_edge(0, 2)
-        nonbiGraph.add_edge(0, 3)
+        nonbiGraph.addEdge(0, 1)
+        nonbiGraph.addEdge(1, 2)
+        nonbiGraph.addEdge(2, 3)
+        nonbiGraph.addEdge(0, 2)
+        nonbiGraph.addEdge(0, 3)
         self.notbipartite = BipartiteDFS(nonbiGraph)
 
     def test_connecting(self):
@@ -68,7 +68,7 @@ class ConnectedComponentsTest(unittest.TestCase):
         count = 2
         for i in range(1, 10):
             count += 1
-            g.add_edge(i, i+1)
+            g.addEdge(i, i+1)
         self.integrity = ConnectedComponents(g)
         self.assertEqual(count, self.integrity.count())
 
@@ -76,21 +76,21 @@ class ConnectedComponentsTest(unittest.TestCase):
 class TestTopologicalSort(unittest.TestCase):
     def setUp(self):
         self.d = DiGraph(7)
-        self.d.add_edge(0, 5)
-        self.d.add_edge(0, 2)
-        self.d.add_edge(0, 1)
-        self.d.add_edge(3, 6)
-        self.d.add_edge(3, 5)
-        self.d.add_edge(3, 4)
-        self.d.add_edge(5, 2)
-        self.d.add_edge(6, 4)
-        self.d.add_edge(6, 0)
-        self.d.add_edge(3, 2)
-        self.d.add_edge(1, 4)
+        self.d.addEdge(0, 5)
+        self.d.addEdge(0, 2)
+        self.d.addEdge(0, 1)
+        self.d.addEdge(3, 6)
+        self.d.addEdge(3, 5)
+        self.d.addEdge(3, 4)
+        self.d.addEdge(5, 2)
+        self.d.addEdge(6, 4)
+        self.d.addEdge(6, 0)
+        self.d.addEdge(3, 2)
+        self.d.addEdge(1, 4)
 
     def test_topological(self):
         self.t = TopologicalSort(self.d)
-        torder = self.t.get_topological()
+        torder = self.t.getTopological()
         self.assertEqual(torder, [3, 6, 0, 1, 4, 5, 2])
 
 

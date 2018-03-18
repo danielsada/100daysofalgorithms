@@ -28,8 +28,3 @@ class Edge:
 
     def __eq__(self, other):
         return self.weight == other.weight
-
-
-a = Edge(0, 1, 1)
-b = Edge(0, 2, 3)
-print(a == b)

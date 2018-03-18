@@ -11,7 +11,7 @@ class TestUGraph(unittest.TestCase):
         "We'll connect 1 node to 999 nodes and expect the len of adj to be 999"
         self.assertEqual(len(self.a.adj[0]), 0)
         for i in range(1, 1000):
-            self.a.add_edge(0, i)
+            self.a.addEdge(0, i)
         self.assertEqual(len(self.a.adj[0]),  999)
         self.assertEqual(UGraph.degree(self.a, 0), 999)
 

@@ -1,3 +1,4 @@
+from algorithms.weightedgraph.edge import Edge
 #!/usr/bin/env
 
 __author__ = "Daniel Sada"
@@ -8,8 +9,6 @@ __email__ = "yo@danielsada.mx"
 Implementation of a Undirected  Weighted Graph for further algorithm exercises.
 """
 
-from algorithms.weightedgraph.edge import Edge
-
 
 class WeightedGraph:
     def __init__(self, v: int):
@@ -18,7 +17,7 @@ class WeightedGraph:
         for i in range(0, self.V):
             self.adj[i] = []
 
-    def add_edge(self, e: Edge):
+    def addEdge(self, e: Edge):
         v: int = e.either()
         w = e.other(v)
         self.adj[v].append(e)
@@ -27,7 +26,7 @@ class WeightedGraph:
     def close(self, v: int):
         return iter(self.adj[v])
 
-    def num_E(self, v) -> int:
+    def numEdges(self, v) -> int:
         return len(self.adj[v])
 
     def edges(self):
@@ -40,6 +39,6 @@ class WeightedGraph:
     @staticmethod
     def degree(G, v):
         Gdegree = 0
-        for connections in G.close(v):
+        for _ in G.close(v):
             Gdegree += 1
         return Gdegree

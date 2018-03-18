@@ -1,5 +1,5 @@
-from algorithms.ugraph import UGraph
 from typing import List
+from algorithms.ugraph import UGraph
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"

@@ -14,4 +14,4 @@ class RBTNode:
         self.right = None
         self.item = item
         self.count = None
-        self.color = red 
+        self.color = red

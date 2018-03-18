@@ -16,19 +16,19 @@ class DiGraph:
         for i in range(0, v):
             self.adj[i] = []
 
-    def add_edge(self, v: int, w: int):
+    def addEdge(self, v: int, w: int):
         self.adj[v].append(w)
 
     def close(self, v: int):
         return iter(self.adj[v])
 
-    def num_E(self, v) -> int:
+    def numberEdges(self, v) -> int:
         return len(self.adj[v])
 
     @staticmethod
     def degree(G, v):
         Gdegree = 0
-        for connections in G.close(v):
+        for _ in G.close(v):
             Gdegree += 1
         return Gdegree
 
@@ -36,5 +36,5 @@ class DiGraph:
         rev = DiGraph(self.V)
         for v in range(0, self.V):
             for n in self.close(v):
-                rev.add_edge(n, v)
+                rev.addEdge(n, v)
         return rev

@@ -1,6 +1,6 @@
+from typing import Iterator
 from algorithms.weightedgraph.edge import Edge
 from algorithms.weightedgraph.weightedgraph import WeightedGraph
-from typing import Iterator
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"

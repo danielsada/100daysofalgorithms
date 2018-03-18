@@ -14,8 +14,8 @@ class QuickSort:
     def __init__(self, arr, hasPlentyOfEqualElements=False):
         self.arr = arr
         random.shuffle(self.arr)
-        if(hasPlentyOfEqualElements):
-            self.sorted = self.three_way_quicksort(self.arr)
+        if hasPlentyOfEqualElements:
+            self.sorted = self.threeWayQuicksort(self.arr)
         else:
             self.sorted = self.quicksort(self.arr)
 
@@ -29,7 +29,7 @@ class QuickSort:
         greater = [i for i in lst[1:] if i > pivot]
         return self.quicksort(less) + [pivot] + self.quicksort(greater)
 
-    def three_way_quicksort(self, lst):
+    def threeWayQuicksort(self, lst):
         if len(lst) <= 1:
             return lst
         pivot = lst[0]

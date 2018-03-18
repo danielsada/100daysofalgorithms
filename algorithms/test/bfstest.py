@@ -1,7 +1,6 @@
 import unittest
 from algorithms.ugraph.ugraph import UGraph
 from algorithms.bfs.bfs import BreadthFirstPaths
-from typing import List
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
@@ -17,7 +16,7 @@ class TestDFS(unittest.TestCase):
     def setUp(self):
         self.pairs = UGraph(100)
         for x in range(0, 98, 2):
-            self.pairs.add_edge(x, x+2)
+            self.pairs.addEdge(x, x+2)
 
     def test_connecting(self):
         """Connect the pairs from 0 to 96, and see if they are connected."""

@@ -11,13 +11,12 @@ class SelectionSort:
 
     def __init__(self, arr):
         self.arr = arr
-        self.selection_sort()
+        self.selectionSort()
         self.sorted = arr
 
-    def selection_sort(self):
+    def selectionSort(self):
         index = 0
         while index != len(self.arr) + 1:
-            sz = len(self.arr)
             if self.arr[index+1:] != []:
                 sw_index = self.arr.index(min(self.arr[index+1:]))
                 if self.arr[sw_index] < self.arr[index]:

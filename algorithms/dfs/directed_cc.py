@@ -29,7 +29,7 @@ class DirectedCC:
     def count(self):
         return self.num_of_components
 
-    def ID(self, v: int):
+    def getId(self, v: int):
         return self.id[v]
 
     def dfs(self, g: DiGraph, v: int):
