@@ -26,7 +26,7 @@ class BreadthFirstPaths:
         self.marked[s] = True
         self.queue.append(s)
         while self.queue:
-            current_item = self.queue.pop()
+            current_item = self.queue.pop(0)
             for elem in self.g.close(current_item):
                 if not self.marked[elem]:
                     self.queue.insert(0, elem)

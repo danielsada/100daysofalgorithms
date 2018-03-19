@@ -29,13 +29,6 @@ class BinarySearchTree:
         self.i += 1
         return ret
 
-    def _inorderHelper(self, node: BSTNode):
-        if node is None:
-            return
-        self._inorderHelper(node.left)
-        self.inorder_arr.append(node.item)
-        self._inorderHelper(node.right)
-
     def put(self, item: tuple):
         self.root = self._putHelper(self.root, item)
 
@@ -173,21 +166,32 @@ class BinarySearchTree:
             node.left) is not None else 0
         return 1 + sz_node_left + sz_node_right
 
+    def _inorderHelper(self, node: BSTNode):
+        if node is None:
+            return
+        self._inorderHelper(node.left)
+        self.inorder_arr.append(node.item)
+        self._inorderHelper(node.right)
 
-# Alternative solution for floor:
-    # def floor(self, item):
-    #     if item is None:
-    #         return None
-    #     return self._floorhelper(self.root, item, None)
-
-    # def _floorhelper(self, node, item, best):
-    #     if node is None:
-    #         return best
-    #     _, v = node.item
-    #     _, vo = item
-    #     if vo < v:
-    #         return self._floorhelper(node.left, item, best)
-    #     elif vo > v:
-    #         return self._floorhelper(node.right, item, node.item)
-    #     else:
-    #         return node.item
+    def levelOrder(self):
+        items = []
+        queue = []
+        queue.append(self.root)
+        while(queue):
+            node = queue.pop(0)
+            if node is None:
+                continue
+            # if node.left is None:
+            #     if node.right is None:
+            #         items.append((node.item, None, None))
+            #     else:
+            #         items.append((node.item, None, node.right.item))
+            # else:
+            #     if node.right is None:
+            #         items.append((node.item, node.left.item, None))
+            #     else:
+            #         items.append((node.item, node.left.item, node.right.item))
+            items.append(node.item)
+            queue.append(node.left)
+            queue.append(node.right)
+        return items

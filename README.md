@@ -151,11 +151,8 @@ Topics to cover:
  - [x] mergesort
  - [x] heapsort
  - [x] binary heaps
- - [ ] binary search trees
- - [ ] red−black trees
- - [ ] separate chaining and linear probing hash tables
- - [ ] Graham scan
- - [ ]  kd-trees
+ - [x] binary search trees
+ - [x] red−black trees
  - [x] depth-first search
  - [x] breadth-first search
  - [x] topological sort
@@ -178,6 +175,9 @@ Topics to cover:
  - [ ] Huffman coding
  - [ ] LZW compression and Burrows−Wheeler transform.
 
+Things to implement when finished researching regular algorithms (due to the time they take)
+ - [ ] Graham scan
+ - [ ]  kd-trees
 
 # Links
 ## Will fill this as soon as I finish
