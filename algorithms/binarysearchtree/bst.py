@@ -177,7 +177,7 @@ class BinarySearchTree:
         items = []
         queue = []
         queue.append(self.root)
-        while(queue):
+        while queue:
             node = queue.pop(0)
             if node is None:
                 continue

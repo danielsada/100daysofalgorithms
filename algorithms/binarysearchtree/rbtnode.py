@@ -9,9 +9,9 @@ class RBTNode:
     The representation of a node for a red black tree node
     """
 
-    def __init__(self, item: tuple, red=False):
+    def __init__(self, item: tuple, isRed=False):
         self.left = None
         self.right = None
         self.item = item
         self.count = None
-        self.color = red
+        self.color = isRed

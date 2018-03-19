@@ -16,7 +16,7 @@ A clean implementation of a Red Black Tree
 """
 
 
-class RBT:  # Red Black Tree
+class RedBlackTree:  # Red Black Tree
     RED = True
     BLACK = False
 
@@ -69,20 +69,18 @@ class RBT:  # Red Black Tree
         return child_node
 
     def _flipColors(self, node: RBTNode):
-        assert not self.isRed(node)
-        assert self.isRed(node.right)
-        assert self.isRed(node.left)
-        node.color = self.RED
-        node.left.color = self.BLACK
-        node.right.color = self.BLACK
+        node.color = not node.color
+        node.left.color = not node.left.color
+        node.right.color = not node.right.color
 
     def put(self, item: tuple):
         self.root = self._putHelper(self.root, item)
-        self.root.color = self.BLACK
+        if self.root is not None:
+            self.root.color = self.BLACK
 
     def _putHelper(self, node: RBTNode, item: tuple) -> RBTNode:
         if node is None:
-            return RBTNode(item, RBT.RED)
+            return RBTNode(item, self.RED)
         xk, _ = node.item
         k, _ = item
         if k < xk:
@@ -94,10 +92,10 @@ class RBT:  # Red Black Tree
 
         if self.isRed(node.right) and not self.isRed(node.left):
             node = self._rotateLeft(node)
-        if self.isRed(node.left) and self.isRed(node.left.left):
+        if self.isRed(node.left) and node.left and self.isRed(node.left.left):
             node = self._rotateRight(node)
         if self.isRed(node.left) and self.isRed(node.right):
-            node = self._flipColors(node)
+            self._flipColors(node)
 
         return node
 
@@ -108,19 +106,19 @@ class RBT:  # Red Black Tree
         self.root = self._deleteHelper(self.root, key)
 
     def _deleteHelper(self, node: RBTNode, key):
-        node_key, _ = node
-        if key < node_key:
+        nk, _ = node.item
+        if key < nk:
             if not self.isRed(node.left) and not self.isRed(node.left.left):
                 node = self._moveRedLeft(node)
             node.left = self._deleteHelper(node.left, key)
         else:
             if self.isRed(node.left):
                 node = self._rotateRight(node)
-            if key == node_key and node.right is None:
+            if key == nk and node.right is None:
                 return None
             if not self.isRed(node.right) and not self.isRed(node.right.left):
                 node = self._moveRedRight(node)
-            if key == node_key:
+            if key == nk:
                 x: RBTNode = self.minimum(node.right)
                 node.item = x.item
                 node.right = self.deleteMinimum(node.right)
@@ -132,21 +130,21 @@ class RBT:  # Red Black Tree
         assert node != None  # noqa: E711
         assert self.isRed(node) and not self.isRed(
             node.left) and not self.isRed(node.left.left)
-        node = self._flipColors(node)
+        self._flipColors(node)
         if not self.isRed(node.right.left):
             node.right = self._rotateRight(node.right)
             node = self._rotateLeft(node)
-            node = self._flipColors(node)
+            self._flipColors(node)
         return node
 
     def _moveRedRight(self, node):
         assert node != None
         assert self.isRed(node) and not self.isRed(
             node.right) and not self.isRed(node.right.left)
-        node = self._flipColors(node)
+        self._flipColors(node)
         if self.isRed(node.left.left):
             node = self._rotateRight(node)
-            node = self._flipColors(node)
+            self._flipColors(node)
         return node
 
     @staticmethod
@@ -170,7 +168,7 @@ class RBT:  # Red Black Tree
         if self.isRed(node.left) and self.isRed(node.left.left):
             node = self._rotateRight(node)
         if self.isRed(node.left) and self.isRed(node.right):
-            node = self._flipColors(node)
+            self._flipColors(node)
         node.count = 1 + self.size(node.left) + self.size(node.right)
         return node
 
@@ -191,3 +189,28 @@ class RBT:  # Red Black Tree
             else:
                 return x.item
         return None
+
+    def getMaxElem(self):
+        elem = self.root
+        while elem is not None and elem.right is not None:
+            elem = elem.right
+        return elem.item
+
+    def getMinElem(self):
+        elem = self.root
+        while elem is not None and elem.left is not None:
+            elem = elem.left
+        return elem.item
+
+    # def deleteMin(self):
+    #     if not self.isRed(self.root.left) and not self.isRed(self.root.right):
+    #         self.root.color = self.RED
+    #     self.root = self._deleteMinHelper(self.root)
+
+    # def _deleteMinHelper(self, node):
+    #     if node.left is None:
+    #         return None
+    #     if not self.isRed(node.left) and not self.isRed(node.left.left):
+    #         node = self._moveRedLeft(node)
+    #     node.left = self._deleteMinHelper(node.left)
+    #     return self._balance(node)
