@@ -134,9 +134,7 @@ Day 31:
 - [x] Bugfixing, bst methods should take keys, not items.
 - [x] Added more unit tests.
 
-Problems to solve if you don't want to learn new algorithm today:
-- [ ] 7 Bridges of Konnisburg
-- [ ] Hamiltonian Cycle
+
 
 Topics to cover:
  - [x] union-find
