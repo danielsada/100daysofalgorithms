@@ -1,4 +1,4 @@
-from algorithms.digraph.digraph import DiGraph
+from algorithms.digraph import DiGraph
 from algorithms.dfs.topologicalsort import TopologicalSort
 
 __author__ = "Daniel Sada"
@@ -18,7 +18,7 @@ class DirectedCC:
         self.curr_component = 0
         self.num_of_components = 0
         tsort = TopologicalSort(g.reverse())
-        postorder = tsort.get_postorder()
+        postorder = tsort.getPostorder()
         self.g = g
         for elem in postorder:
             if not self.marked[elem]:

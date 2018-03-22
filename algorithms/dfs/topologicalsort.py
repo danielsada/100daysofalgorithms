@@ -1,4 +1,4 @@
-from algorithms.digraph.digraph import DiGraph
+from algorithms.digraph import DiGraph
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"

@@ -1,5 +1,5 @@
 from algorithms.unionfind.weightedunionfind import WeightedUnionFind
-from algorithms.mst.mst import MST
+from algorithms.mst.mst import Mst
 from algorithms.weightedgraph.weightedgraph import WeightedGraph
 from algorithms.weightedgraph.edge import Edge
 __author__ = "Daniel Sada"
@@ -20,7 +20,7 @@ class Kruskal:
     """
 
     def __init__(self, g: WeightedGraph):
-        self.mst = MST(g)
+        self.mst = Mst(g)
         self.g = g
         self.edges = g.edges()
         self.edges.sort(key=lambda x: x.weight, reverse=True)

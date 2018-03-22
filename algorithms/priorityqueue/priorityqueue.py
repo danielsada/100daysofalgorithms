@@ -12,8 +12,7 @@ class PriorityQueue:
     This is a proxy for a MaxHeap
     """
 
-    def __init__(self, tupled=False):
-        self.tupled = tupled
+    def __init__(self):
         self.pq: MaxHeap = MaxHeap()
 
     def add(self, elem):
