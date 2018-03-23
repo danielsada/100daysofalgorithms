@@ -15,6 +15,12 @@ class PriorityQueue:
     def __init__(self):
         self.pq: MaxHeap = MaxHeap()
 
+    def __len__(self):
+        return len(self.pq)
+
+    def __repr__(self):
+        return f"PQ => {self.pq.elements} with peek {self.pq.peek()}"
+
     def add(self, elem):
         self.pq.push(elem)
 

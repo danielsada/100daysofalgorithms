@@ -21,6 +21,9 @@ class MaxHeap(Heap):
         self.tupled = tupled
         super().__init__()
 
+    def __len__(self):
+        return len(self.elements)
+
     def peek(self):
         if self.size <= 0:
             raise IndexError("Well, you went out of the bucket, friend.")

@@ -14,6 +14,9 @@ class Edge:
         self.w = w
         self.weight = weight
 
+    def __repr__(self):
+        return f"{self.v} <=> {self.w}, {self.weight}"
+
     def either(self) -> int:
         return self.v
 
