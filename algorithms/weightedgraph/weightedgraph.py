@@ -32,7 +32,7 @@ class WeightedGraph:
     def edges(self):
         edgelist = []
         for i in range(0, self.V):
-            for e in self.adj(i):
+            for e in self.adj[i]:
                 edgelist.append(e)
         return edgelist
 

@@ -12,6 +12,7 @@ class TestHeaps(unittest.TestCase):
         self.mxh = MaxHeap()
         self.mxht = MaxHeap(tupled=True)
         self.pq = PriorityQueue()
+        self.pqmin = PriorityQueue(False)
 
     def test_generic_heap(self):
         """
@@ -69,6 +70,13 @@ class TestHeaps(unittest.TestCase):
         self.assertEqual(self.pq.pop(), 200)
         self.assertEqual(self.pq.pop(), 6)
         self.assertEqual(self.pq.pop(), 5)
+        self.assertEqual(self.pq.pop(), 3)
+        for e in arr:
+            self.pqmin.add(e)
+        self.assertEqual(self.pqmin.pop(), 1)
+        self.assertEqual(self.pqmin.pop(), 2)
+        self.assertEqual(self.pqmin.pop(), 3)
+        self.assertEqual(self.pqmin.pop(), 5)
 
 
 if __name__ == '__main__':

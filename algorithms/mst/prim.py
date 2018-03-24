@@ -17,7 +17,7 @@ class Prim:
         self.g = g
         self.mst = []
         self.marked = [False]*self.g.V
-        self.pq = PriorityQueue()
+        self.pq = PriorityQueue(False)
         self.weight = 0
         self.lazyPrim(self.g)
 

@@ -1,4 +1,5 @@
 from algorithms.heaps.maxheap import MaxHeap
+from algorithms.heaps.minheap import MinHeap
 
 
 __author__ = "Daniel Sada"
@@ -12,8 +13,11 @@ class PriorityQueue:
     This is a proxy for a MaxHeap
     """
 
-    def __init__(self):
-        self.pq: MaxHeap = MaxHeap()
+    def __init__(self, mx=True):
+        if mx:
+            self.pq: MaxHeap = MaxHeap()
+        else:
+            self.pq: MinHeap = MinHeap()
 
     def __len__(self):
         return len(self.pq)
