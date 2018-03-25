@@ -4,7 +4,7 @@ Hello! I'm Daniel Sada. I'm trying to do an algorithm or two a day or at least t
 
 # Running unit tests.
 
-Clone the project, then run:
+Clone the project, then run :
 
 ```
 python3 -m unittest discover algorithms/test -p '*.py'
