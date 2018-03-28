@@ -1,6 +1,6 @@
 """Binary First Search"""
 
-from algorithms.ugraph import UGraph
+from algorithms.ugraph.ugraph import UGraph
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"

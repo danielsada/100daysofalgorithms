@@ -30,7 +30,7 @@ Modified by me aftewards.
 
 class IndexMinPQ:
     def __init__(self, maxN):
-        self.pq = [None] * (maxN+1)
+        self.pq = [0] * (maxN+1)
         self.qp = [-1] * (maxN+1)
         self.keys = [None] * (maxN+1)
         self.maxN = maxN
@@ -43,9 +43,10 @@ class IndexMinPQ:
         return self.qp[i] != -1
 
     def insert(self, i, item):
-        assert(i > 0 and i < self.maxN)
+        if i < 0 or i >= self.maxN:
+            raise "out of bounds in insert of indexminpq"
         if self.contains(i):
-            raise "Already contains string"
+            raise Exception(f"Already contains string {item}")
         self.n += 1
         self.qp[i] = self.n
         self.pq[self.n] = i
@@ -65,7 +66,7 @@ class IndexMinPQ:
         self.n -= 1
         self.exch(1, self.n)
         self.sink(1)
-        assert minE == self.pq[self.n+1]
+        assert minE == self.pq[self.n]
         self.qp[minE] = -1  # Delete
         self.keys[minE] = None
         self.pq[self.n+1] = -1
@@ -86,34 +87,37 @@ class IndexMinPQ:
     def delete(self, i):
         index = self.qp[i]
         self.n -= 1
-        self.exch(index, n)
+        self.exch(index, self.n)
         self.swim(index)
         self.sink(index)
         self.keys[i] = None
         self.qp[i] = -1
 
     def exch(self, i, j):
-        self.pq[i], self.pq[j] = self.pq[j], self.pq[i]
-        self.qp[self.pq[i]], self.qp[self.pq[j]] = i, j
+        swap = self.pq[i]
+        self.pq[i] = self.pq[j]
+        self.pq[j] = swap
+        self.qp[self.pq[i]] = i
+        self.qp[self.pq[j]] = j
 
     def greater(self, i, j):
+        if self.keys[self.pq[i]] is None:
+            return False
+        if self.keys[self.pq[j]] is None:
+            return True
         return self.keys[self.pq[i]] > self.keys[self.pq[j]]
 
     def swim(self, k):
-        while k > 0 and self.greater((k - 1) // 2, k):
-            self.pq[k], self.pq[
-                (k - 1) // 2] = self.pq[(k - 1) // 2], self.pq[k]
-            k = (k - 1) // 2
+        while k > 1 and self.greater(k // 2, k):
+            self.exch(k, k//2)
+            k = k//2
 
     def sink(self, k):
-        N = len(self.pq)
-        while 2 * k + 1 <= N - 1:
-            j = 2 * k + 1
-            if j < N - 1 and self.greater(j, j + 1):
+        while 2*k <= self.n:
+            j = 2*k
+            if j < self.n and self.greater(j, j+1):
                 j += 1
-
-            if not self.greater(k, j):
+            if not self.greater(j, j+1):
                 break
-
-            self.pq[k], self.pq[j] = self.pq[j], self.pq[k]
+            self.exch(k, j)
             k = j
