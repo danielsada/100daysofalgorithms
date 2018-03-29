@@ -134,6 +134,63 @@ Day 31:
 - [x] Bugfixing, bst methods should take keys, not items.
 - [x] Added more unit tests.
 
+Day 32 : 
+- [x] Started to learn (and code) red black trees. 
+
+Day 33:
+- [X] Implemented rotate left, rotate right, move left move right and put for Red Black Trees
+
+Day 34:
+- [x] Finished Red Black Tree Deletion, 
+- [x] RBT Minimum, 
+- [x] Balancing the tree.
+
+Day 35:
+- [x] Linted the entire project, fixed all of the warnings in the files. 
+
+Day 36:
+- [x] Learned about kd trees. 
+- [x] Added some more tests to BSTs
+- [x] level order traversal for BST.
+
+Day 37:
+- [x] Added unit tests to my Red Black tree implementation.
+- [x] Bugfixing RBTs
+- [x] Discovered delete min was not implemented correctly
+
+Day 38:
+- [x] Learned about 1D and 2D interval search with BSTs
+- [x] Implemented in some cases python __len__ __repr__ __build_subclass__ etc, also __add__.
+
+Day 39:
+- [x]  More changes in imports.
+- [x] started prim's algorithm for MSTs 
+- [x] Seeing whether a contains method is useful in a MST.
+
+Day 40:
+- [x] Kept working on prim's algorithm for minimum spanning trees. 
+- [x] I added some unit tests for prim.
+- [x] Dunder methods for Heap, PQ, Edge, etc.
+
+Day 41:
+- [x] Finally finished Prim's algorithm. 
+- [x] Added Heap unit tests, priority queue unit tests, fixed weighted graph. 
+- [x] Added tests for weighted graphs.
+
+Day 42: 
+- [x] Read about Delaunay's Triangulation and Voronoi diagrams. 
+- [x] Learned about how Prim & Kruskal's algorithms can be used for k-clustering and that it can be close to linear. 
+- [x] Implemented Directed Weighted Graphs API.
+
+Day 43:
+- [x] Started working on Dijkstra 
+- [x] MinimumIndexedPriority queues.
+
+Day 44: 
+- [x] Continued implementing Dijkstra implemented with MinimumIndixedPriority queues
+
+Day 45: 
+- [x] Did Dijkstra unit test, still debugging. 
 
 
 Topics to cover:
@@ -156,7 +213,7 @@ Topics to cover:
  - [x] topological sort
  - [x] Kosaraju−Sharir
  - [x] Kruskal
- - [ ] Prim
+ - [x] Prim
  - [ ] Dijkistra
  - [ ] Bellman−Ford
  - [ ] Ford−Fulkerson
