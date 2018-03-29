@@ -192,6 +192,11 @@ Day 44:
 Day 45: 
 - [x] Did Dijkstra unit test, still debugging. 
 
+Day 46:
+- [x] Finished Dijkstra implementation with Indexed Minimum Priority Queues
+
+Day 47:
+- [x] Implemented Bellman-Ford for negative directed graphs without negative cycles.
 
 Topics to cover:
  - [x] union-find
@@ -215,7 +220,7 @@ Topics to cover:
  - [x] Kruskal
  - [x] Prim
  - [x] Dijkistra
- - [ ] Bellman−Ford
+ - [X] Bellman−Ford
  - [ ] Ford−Fulkerson
  - [ ] LSD radix sort
  - [ ] MSD radix sort
