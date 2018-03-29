@@ -35,7 +35,7 @@ class DijkstraSP:
             self.distTo[w] = self.distTo[v] + edge.weight
             self.edgeTo[w] = edge
             if self.pq.contains(w):
-                self.pq.decreaseItem(w, self.distTo[w])
+                self.pq.change_key(w, self.distTo[w])
             else:
                 self.pq.insert(w, self.distTo[w])
 

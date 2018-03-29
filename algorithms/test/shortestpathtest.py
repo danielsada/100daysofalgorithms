@@ -2,32 +2,19 @@ import unittest
 from algorithms.weightedgraph.diweightedgraph import DirectedWeightedGraph
 from algorithms.weightedgraph.diedge import DiEdge
 from algorithms.shortestpaths.dijkstra import DijkstraSP
-
+from algorithms.priorityqueue.indexminpq import IndexMinPQ
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
 
 """
-
+A little test for dijkstra
 """
 
 
 class TestSP(unittest.TestCase):
     def setUp(self):
-        # g = WeightedGraph(10)
-        # g.addEdge(Edge(0, 2, 0.1))
-        # g.addEdge(Edge(0, 3, 0.1))
-        # g.addEdge(Edge(9, 0, 0.1))
-        # g.addEdge(Edge(0, 1, 0.1))
-        # g.addEdge(Edge(1, 9, 0.1))
-
-        # g.addEdge(Edge(2, 8, 0.1))
-        # g.addEdge(Edge(3, 7, 0.1))
-        # g.addEdge(Edge(4, 6, 0.1))
-        # g.addEdge(Edge(3, 4, 0.1))
-        # g.addEdge(Edge(4, 1, 0.1))
-
         aO = DirectedWeightedGraph(8)
         aO.addEdge(DiEdge(4, 5, 0.35))
         aO.addEdge(DiEdge(5, 4, 0.35))
@@ -47,14 +34,11 @@ class TestSP(unittest.TestCase):
         self.anotherOne = aO
 
     def test_dijkstra(self):
+        weights = [0, 1.05, 0.26, 0.99, 0.38, 0.73, 1.51, 0.60]
         d = DijkstraSP(self.anotherOne, 0)
-        for t in range(1, self.anotherOne.V):
-            print(f"Testing {t} connections")
+        for t in range(0, 8):
             if d.hasPathTo(t):
-                print(f"0 => {t} d = {d.distTo[t]}")
-                print(d.pathTo(t))
-            else:
-                print("no path bro")
+                self.assertAlmostEqual(d.distTo[t], weights[t], delta=0.01)
 
 
 if __name__ == '__main__':
