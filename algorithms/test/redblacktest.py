@@ -65,7 +65,7 @@ class BSTTest(unittest.TestCase):
         test.put(('s', "www"))
         test.put(('e', "www.e"))
         test.put(('a', "www.w"))
-        print(test.root)
+        # print(test.root)
         test.delete('e')
         self.assertIsNone(test.get('e'))
 

@@ -214,7 +214,7 @@ Topics to cover:
  - [x] Kosaraju−Sharir
  - [x] Kruskal
  - [x] Prim
- - [ ] Dijkistra
+ - [x] Dijkistra
  - [ ] Bellman−Ford
  - [ ] Ford−Fulkerson
  - [ ] LSD radix sort
@@ -233,6 +233,10 @@ Topics to cover:
 Things to implement when finished researching regular algorithms (due to the time they take)
  - [ ] Graham scan
  - [ ]  kd-trees
+
+TODO after all algorithms:
+- [ ] Determine complexities
+- [ ] Add docstrings to tests.
 
 # Links
 ## Will fill this as soon as I finish

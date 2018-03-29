@@ -42,7 +42,7 @@ class Prim:
                 self.scan(g, w)
 
     def scan(self, g, v):
-        print("Current pq, ", self.pq.pq.elements)
+        # print("Current pq, ", self.pq.pq.elements)
         self.marked[v] = True
         for e in g.adj[v]:
             if not self.marked[e.other(v)]:
