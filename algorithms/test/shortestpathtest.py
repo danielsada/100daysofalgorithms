@@ -2,7 +2,7 @@ import unittest
 from algorithms.weightedgraph.diweightedgraph import DirectedWeightedGraph
 from algorithms.weightedgraph.diedge import DiEdge
 from algorithms.shortestpaths.dijkstra import DijkstraSP
-from algorithms.priorityqueue.indexminpq import IndexMinPQ
+from algorithms.shortestpaths.bellmanford import BellmanFord
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
@@ -36,6 +36,13 @@ class TestSP(unittest.TestCase):
     def test_dijkstra(self):
         weights = [0, 1.05, 0.26, 0.99, 0.38, 0.73, 1.51, 0.60]
         d = DijkstraSP(self.anotherOne, 0)
+        for t in range(0, 8):
+            if d.hasPathTo(t):
+                self.assertAlmostEqual(d.distTo[t], weights[t], delta=0.01)
+
+    def test_bellman_ford(self):
+        weights = [0, 1.05, 0.26, 0.99, 0.38, 0.73, 1.51, 0.60]
+        d = BellmanFord(self.anotherOne, 0)
         for t in range(0, 8):
             if d.hasPathTo(t):
                 self.assertAlmostEqual(d.distTo[t], weights[t], delta=0.01)

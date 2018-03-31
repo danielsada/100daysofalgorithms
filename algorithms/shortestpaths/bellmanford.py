@@ -34,5 +34,18 @@ class BellmanFord:
                 self.edgeTo[w] = e
                 if not self.isQueued[w]:
                     self.q.append(w)
-                    self.isQueued = True
+                    self.isQueued[w] = True
             self.timesRelaxed += 1
+
+    def hasPathTo(self, v):
+        return self.distTo[v] < math.inf
+
+    def pathTo(self, v):
+        if not self.hasPathTo(v):
+            return None
+        de = []
+        e = self.edgeTo[v]
+        while e is not None and e:
+            de.append(e)
+            e = self.edgeTo[e.From()]
+        return de
