@@ -210,8 +210,10 @@ Topics to cover:
  - [x] 3-way quicksort
  - [x] mergesort
  - [x] heapsort
+ - [x] Graham scan
  - [x] binary heaps
  - [x] binary search trees
+ - [x]  kd-trees
  - [x] red−black trees
  - [x] depth-first search
  - [x] breadth-first search
@@ -221,7 +223,7 @@ Topics to cover:
  - [x] Prim
  - [x] Dijkistra
  - [X] Bellman−Ford
- - [ ] Ford−Fulkerson
+ - [X] Ford−Fulkerson
  - [ ] LSD radix sort
  - [ ] MSD radix sort
  - [ ] 3-way radix quicksort
@@ -236,8 +238,9 @@ Topics to cover:
  - [ ] LZW compression and Burrows−Wheeler transform.
 
 Things to implement when finished researching regular algorithms (due to the time they take)
+ - [ ] Ford Fulkerson
  - [ ] Graham scan
- - [ ]  kd-trees
+ - [ ] Kd-trees
 
 TODO after all algorithms:
 - [ ] Determine complexities
