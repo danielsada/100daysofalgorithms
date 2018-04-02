@@ -1,6 +1,6 @@
 import math
 from collections import defaultdict
-from algorithms.weightedgraph.diweightedgraph import DirectedWeightedGraph
+from algorithms.weightedgraph import DirectedWeightedGraph
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"

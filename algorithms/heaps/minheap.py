@@ -1,4 +1,4 @@
-from algorithms.heaps.heap import Heap
+from .heap import Heap
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"

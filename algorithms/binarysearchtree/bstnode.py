@@ -1,6 +1,3 @@
-"""
-Node for Binary Search Tree
-"""
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"

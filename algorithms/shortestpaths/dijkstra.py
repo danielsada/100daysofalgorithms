@@ -1,8 +1,7 @@
 import math
 from collections import defaultdict
-from algorithms.weightedgraph.diedge import DiEdge
-from algorithms.weightedgraph.diweightedgraph import DirectedWeightedGraph
-from algorithms.priorityqueue.indexminpq import IndexMinPQ
+from algorithms.weightedgraph import DiEdge, DirectedWeightedGraph
+from algorithms.priorityqueue import IndexMinPQ
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"

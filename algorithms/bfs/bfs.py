@@ -1,6 +1,4 @@
-"""Binary First Search"""
-
-from algorithms.ugraph.ugraph import UGraph
+from algorithms.ugraph import UGraph
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
@@ -9,11 +7,11 @@ __email__ = "yo@danielsada.mx"
 
 class BreadthFirstPaths:
     """"
-    This is a Breadth First Search.
-    This will also calculate the distances 
-    between the nodes preemptively.
-    Finds a path between start s, and all other indexes. 
-    Then query it to see if there is a path between two nodes.
+This is a Breadth First Search.
+This will also calculate the distances 
+between the nodes preemptively.
+Finds a path between start s, and all other indexes. 
+Then query it to see if there is a path between two nodes.
     """
 
     def __init__(self, g: UGraph, s: int):

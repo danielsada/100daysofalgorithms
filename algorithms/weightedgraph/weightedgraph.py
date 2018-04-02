@@ -1,16 +1,15 @@
 from algorithms.weightedgraph.edge import Edge
-#!/usr/bin/env
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
 
-"""
-Implementation of a Undirected  Weighted Graph for further algorithm exercises.
-"""
-
 
 class WeightedGraph:
+    """
+    Implementation of a Undirected  Weighted Graph for further algorithm exercises.
+    """
+
     def __init__(self, v: int):
         self.V = v
         self.adj = [None]*v

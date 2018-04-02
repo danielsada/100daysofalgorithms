@@ -3,12 +3,12 @@ __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
 __email__ = "yo@danielsada.mx"
 
-"""
-Implementation of basic Heap Methods in python
-"""
-
 
 class Heap:
+    """
+    Implementation of basic Heap Methods in python
+    """
+
     def __init__(self):
         self.elements = []
 

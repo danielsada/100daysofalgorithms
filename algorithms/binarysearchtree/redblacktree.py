@@ -1,10 +1,4 @@
-"""
-An implementation of Red Black Tree.
-__author__ = "Daniel Sada"
-__license__ = "MIT Licence"
-__email__ = "yo@danielsada.mx"
-"""
-from algorithms.binarysearchtree.rbtnode import RBTNode
+from .rbtnode import RBTNode
 
 
 __author__ = "Daniel Sada"

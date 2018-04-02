@@ -1,5 +1,4 @@
-from algorithms.binarysearchtree.bstnode import BSTNode
-
+from .bstnode import BSTNode
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
