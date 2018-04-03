@@ -198,6 +198,23 @@ Day 46:
 Day 47:
 - [x] Implemented Bellman-Ford for negative directed graphs without negative cycles.
 
+Day 48:
+- [x] Added unit tests for Bellman-Ford.(& fixed a bug! :D)  
+- [x] Started learning about the min-cut/max-flow problems. I was ecstatic that they are equivalent! It is amazing to see it.
+
+Day 49:
+- [x] Finished learning about the Ford-Fulkerson. 
+- [x]  Started Least Significant Digit radix sort.
+
+Day 50:
+- [x] Unit tests for String sorts
+- [x] Finished LSD radix sort.
+
+Day 51:
+- [x] Coded and unit tested MSD radix sort
+- [x] Coded and unit tested three way radix sort.
+
+
 Topics to cover:
  - [x] union-find
  - [x] binary search
@@ -224,9 +241,9 @@ Topics to cover:
  - [x] Dijkistra
  - [X] Bellman−Ford
  - [X] Ford−Fulkerson
- - [ ] LSD radix sort
- - [ ] MSD radix sort
- - [ ] 3-way radix quicksort
+ - [X] LSD radix sort
+ - [X] MSD radix sort
+ - [X] 3-way radix quicksort
  - [ ] multiway tries
  - [ ] ternary search tries
  - [ ] Knuth−Morris−Pratt
