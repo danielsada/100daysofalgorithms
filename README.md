@@ -10,6 +10,45 @@ Clone the project, then run :
 python3 -m unittest discover algorithms/test -p '*.py'
 ```
 
+# Topics to cover:
+ - [x] union-find
+ - [x] binary search
+ - [x] stacks
+ - [x] queues   
+ - [x] insertion sort
+ - [x] selection sort
+ - [x] shellsort
+ - [x] quicksort
+ - [x] 3-way quicksort
+ - [x] mergesort
+ - [x] heapsort
+ - [x] Graham scan
+ - [x] binary heaps
+ - [x] binary search trees
+ - [x]  kd-trees
+ - [x] red−black trees
+ - [x] depth-first search
+ - [x] breadth-first search
+ - [x] topological sort
+ - [x] Kosaraju−Sharir
+ - [x] Kruskal
+ - [x] Prim
+ - [x] Dijkistra
+ - [X] Bellman−Ford
+ - [X] Ford−Fulkerson
+ - [X] LSD radix sort
+ - [X] MSD radix sort
+ - [X] 3-way radix quicksort
+ - [ ] multiway tries
+ - [ ] ternary search tries
+ - [ ] Knuth−Morris−Pratt
+ - [ ] Boyer-Moore
+ - [ ] Rabin−Karp
+ - [ ] regular expression matching
+ - [ ] run-length coding
+ - [ ] Huffman coding
+ - [ ] LZW compression and Burrows−Wheeler transform.
+
 # Day to Day log.
 
 Day 1:
@@ -215,45 +254,6 @@ Day 51:
 - [x] Coded and unit tested three way radix sort.
 
 
-Topics to cover:
- - [x] union-find
- - [x] binary search
- - [x] stacks
- - [x] queues   
- - [x] insertion sort
- - [x] selection sort
- - [x] shellsort
- - [x] quicksort
- - [x] 3-way quicksort
- - [x] mergesort
- - [x] heapsort
- - [x] Graham scan
- - [x] binary heaps
- - [x] binary search trees
- - [x]  kd-trees
- - [x] red−black trees
- - [x] depth-first search
- - [x] breadth-first search
- - [x] topological sort
- - [x] Kosaraju−Sharir
- - [x] Kruskal
- - [x] Prim
- - [x] Dijkistra
- - [X] Bellman−Ford
- - [X] Ford−Fulkerson
- - [X] LSD radix sort
- - [X] MSD radix sort
- - [X] 3-way radix quicksort
- - [ ] multiway tries
- - [ ] ternary search tries
- - [ ] Knuth−Morris−Pratt
- - [ ] Boyer-Moore
- - [ ] Rabin−Karp
- - [ ] regular expression matching
- - [ ] run-length coding
- - [ ] Huffman coding
- - [ ] LZW compression and Burrows−Wheeler transform.
-
 Things to implement when finished researching regular algorithms (due to the time they take)
  - [ ] Ford Fulkerson
  - [ ] Graham scan
@@ -266,22 +266,3 @@ TODO after all algorithms:
 # Links
 ## Will fill this as soon as I finish
  
-# Graphs
-## Undirected graph API [(Go to Code.)](algorithms/ugraph/ugraph.py) [(Tests)](algorithms/test/ugraphtest.py)
-## Depth First Search [(Go to Code.)](algorithms/dfs/dfs.py) [(Tests)](algorithms/test/dfstest.py)
-## Breath First Search [(Go to Code.)](algorithms/bfs/bfs.py) [(Tests)](algorithms/test/bfstest.py)
-## Connected Components [(Go to Code.)](algorithms/dfs/connected_components.py) [(Tests)](algorithms/test/dfstest.py)
-
-
-# Heaps
-
-## Generic Heap [(Go to Code.)](algorithms/heaps/heap.py) 
-## Max Heap [(Go to Code.)](algorithms/heaps/maxheap.py) 
-## Min Heap [(Go to Code.)](algorithms/heaps/minheap.py) 
-
-
-# Union Find
-## Tests for Union-Find [(Go to Tests.)](algorithms/union-find/unionfindtests.py)
-## PathFlattened and Weighted Union Find [(Go to Code.)](algorithms/union-find/pathflattenedunionfind.py)
-## Weighted Union Find [(Go to Code.)](algorithms/union-find/weightedunionfind.py)
-
