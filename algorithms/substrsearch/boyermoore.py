@@ -5,6 +5,7 @@ __email__ = "yo@danielsada.mx"
 
 from collections import defaultdict
 
+
 class BoyerMoore:
     """"
     An efficient for substring search, Boyer Moore hops around like  bunny after building the first elements.
@@ -16,7 +17,7 @@ class BoyerMoore:
         self.needle = needle
         self.M = len(needle)
         self.letterDict = defaultdict()
-        for i,v in enumerate(needle):
+        for i, v in enumerate(needle):
             if i == self.M-1:
                 self.letterDict[v] = self.M
             else:
@@ -27,11 +28,30 @@ class BoyerMoore:
     def search(self, haystack):
         self.N = len(haystack)
         assert(self.N > self.M)
-        i,j = self.M, self.M
-        # while i != self.N and j != self.N
-        #     if 
+        # Conventions, nI is needle iterator,
+        # hI is a haystack iterator
+        # cI is a comparison iterator
+        nI, hI = self.M-1, self.M-1
+        while hI < self.N:
+            nI = self.M - 1
+            letters = 0
+            cI = hI
+            while(haystack[cI] == self.needle[nI] and letters < self.M):
+                nI -= 1
+                cI -= 1
+                letters += 1
+            if letters == self.M:
+                return hI - self.M
+            else:
+                if self.letterDict.__contains__(haystack[hI]):
+                    hI += self.letterDict[haystack[hI]]
+                else:
+                    hI += self.M-1
+        return None
 
-x = BoyerMoore("team");
-h = "there is no I in team bro"
+
+x = BoyerMoore("team")
+h = "there is no I in bro"
 print(len(h))
-print(x.search(h))
+index = x.search(h)
+print(index)

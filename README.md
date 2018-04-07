@@ -42,7 +42,7 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] multiway tries
  - [X] ternary search tries
  - [X] Knuth−Morris−Pratt
- - [ ] Boyer-Moore
+ - [X] Boyer-Moore
  - [ ] Rabin−Karp
  - [ ] regular expression matching
  - [ ] run-length coding
@@ -254,13 +254,28 @@ Day 51:
 - [x] Coded and unit tested three way radix sort.
 
 Day 52:
-TODO
+- [x] Learned R-Way Tries 
+- [x] Ternary Search Tries.
+- [x] Started coding them.
+
 Day 53:
-Todo
+- [X] R-Way tries
+- [X] Ternary search trees.
+- [X] Unit tests for symbol tables
+
 Day 54:
-Todo
+- [x] Learned about Knuth-Morris-Pratt
+- [x] Learned about Boyer-Moore
+- [x] Created DFA on paper to understand it.
+
 Day 55:
-todo
+- [X] Coded Knuth-Morris-Pratt
+- [X] Started Boyer-Moore
+
+Day 56: 
+- [x] Finished Boyer-Moore
+- [x] Updated logbook.
+
 
 Things to implement when finished researching regular algorithms (due to the time they take)
  - [ ] Ford Fulkerson
@@ -272,5 +287,5 @@ TODO after all algorithms:
 - [ ] Add docstrings to tests.
 
 # Links
-## Will fill this as soon as I finish
+## I will fill this as soon as I finish
  
