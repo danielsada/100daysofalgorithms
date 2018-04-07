@@ -39,9 +39,9 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] LSD radix sort
  - [X] MSD radix sort
  - [X] 3-way radix quicksort
- - [ ] multiway tries
- - [ ] ternary search tries
- - [ ] Knuth−Morris−Pratt
+ - [X] multiway tries
+ - [X] ternary search tries
+ - [X] Knuth−Morris−Pratt
  - [ ] Boyer-Moore
  - [ ] Rabin−Karp
  - [ ] regular expression matching
@@ -253,6 +253,14 @@ Day 51:
 - [x] Coded and unit tested MSD radix sort
 - [x] Coded and unit tested three way radix sort.
 
+Day 52:
+TODO
+Day 53:
+Todo
+Day 54:
+Todo
+Day 55:
+todo
 
 Things to implement when finished researching regular algorithms (due to the time they take)
  - [ ] Ford Fulkerson
