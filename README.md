@@ -1,6 +1,6 @@
 # 100daysofalgorithms
 
-Hello! I'm Daniel Sada. I'm trying to do an algorithm or two a day or at least try to solve a problem a day. I'll be alternating between new algorithms and working in problems with those algorithms. I'm also fairly new with python, and I want to get aquaintanced with Python3.
+Hello! I'm Daniel Sada. I've covered most of this algorithms in classes before, but I didn't implement them myself, and see what roadblocks I've got. I'm trying to do an algorithm or two a day or at least try to solve a problem a day. I'll be alternating between new algorithms and working in problems with those algorithms. I'm also fairly new with python, and I want to get aquaintanced with Python3.
 
 # Running unit tests.
 
@@ -284,7 +284,7 @@ Things to implement when finished researching regular algorithms (due to the tim
 
 TODO after all algorithms:
 - [ ] Determine complexities
-- [ ] Add docstrings to tests.
+- [ ] Add docstrings to tests
 
 # Links
 ## I will fill this as soon as I finish

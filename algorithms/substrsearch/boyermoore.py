@@ -12,6 +12,7 @@ class BoyerMoore:
     """
 
     def __init__(self, needle):
+        self.matches = []
         self.haystack = ""
         self.N = 0
         self.needle = needle
@@ -36,12 +37,14 @@ class BoyerMoore:
             nI = self.M - 1
             letters = 0
             cI = hI
-            while(haystack[cI] == self.needle[nI] and letters < self.M):
+            while(haystack[cI].lower() == self.needle[nI].lower() and letters < self.M):
                 nI -= 1
                 cI -= 1
                 letters += 1
             if letters == self.M:
-                return hI - self.M
+                self.matches.append((haystack[hI-self.M+1:hI+1], hI-self.M))
+                hI += 1
+                continue
             else:
                 if self.letterDict.__contains__(haystack[hI]):
                     hI += self.letterDict[haystack[hI]]
@@ -50,8 +53,8 @@ class BoyerMoore:
         return None
 
 
-x = BoyerMoore("team")
-h = "there is no I in bro"
-print(len(h))
-index = x.search(h)
-print(index)
+# x = BoyerMoore("team")
+# h = "there is no I in bro"
+# print(len(h))
+# index = x.search(h)
+# print(index)
