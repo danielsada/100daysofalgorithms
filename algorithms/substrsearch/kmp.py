@@ -17,8 +17,6 @@ class KnuthMorrisPratt:
         self.needle = needle
         self.M = len(needle)
         self.dfa = [[0 for x in range(self.M)] for y in range(self.R)]
-        # print(self.dfa)
-        # print(self.needle[0])
         self.dfa[ord(self.needle[0])][0] = 1
         x = 0
         for j in range(1, self.M):
@@ -28,20 +26,20 @@ class KnuthMorrisPratt:
             x = self.dfa[ord(self.needle[j])][x]
 
     def search(self, haystack):
-        self.haystack = haystack
-        current = 0
-        self.N = len(self.haystack)
-        while current < self.N:
-            current = self._kmp(current)
-            self.matches.append(current)
+        self.N = len(haystack)
+        curr = 0
+        while haystack != '':
+            curr = self._kmp(haystack)
+            self.matches.append(curr)
+            haystack = haystack[curr+self.M:]
 
-    def _kmp(self, i=0):
-        j = 0
-        while i < self.N and j < self.M:
-            print(self.haystack[i], end=" ",)
-            j = self.dfa[ord(self.haystack[i])][j]
+    def _kmp(self, arr):
+        N = len(arr)
+        i, j = 0, 0
+        while i < N and j < self.M:
+            j = self.dfa[ord(arr[i])][j]
             i += 1
         if j == self.M:
             return i-self.M
         else:
-            return self.N
+            return N
