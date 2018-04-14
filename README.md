@@ -43,11 +43,11 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] ternary search tries
  - [X] Knuth−Morris−Pratt
  - [X] Boyer-Moore
- - [ ] Rabin−Karp
- - [ ] regular expression matching
- - [ ] run-length coding
- - [ ] Huffman coding
- - [ ] LZW compression and Burrows−Wheeler transform.
+ - [X] Rabin−Karp
+ - [X] regular expression matching
+ - [X] run-length coding
+ - [X] Huffman coding
+ - [ ] LZW compression 
 
 # Day to Day log.
 
@@ -285,6 +285,7 @@ Things to implement when finished researching regular algorithms (due to the tim
 TODO after all algorithms:
 - [ ] Determine complexities
 - [ ] Add docstrings to tests
+- [ ] Burrows−Wheeler transform.
 
 # Links
 ## I will fill this as soon as I finish
