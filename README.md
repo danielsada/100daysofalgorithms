@@ -47,7 +47,11 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] regular expression matching
  - [X] run-length coding
  - [X] Huffman coding
- - [ ] LZW compression 
+ - [X] LZW compression 
+
+ Extra:
+
+ - [x]
 
 # Day to Day log.
 
