@@ -32,11 +32,21 @@ class Simplex:
         for j in range(self.n):
             self.t[self.m][j] = c[j]
         for i in range(self.m):
-            self.t[i][self.m+self.n] = b[i]
-        self.bland()
-        self.minRatio(2)
-        self.pivot(2, 1)
+            self.t[i][self.m+self.n] = b[i][0]
+        self.solve()
         print(pd.DataFrame(self.t))
+
+    def solve(self):
+        i = 0
+        while(i < 1000):
+            q = self.bland()
+            if(q == -1):
+                break
+            p = self.minRatio(q)
+            if(p == -1):
+                break
+            self.pivot(p, q)
+            i += 1
 
     def bland(self) -> int:
         for q in range(self.m+self.n):
@@ -51,7 +61,7 @@ class Simplex:
                 continue
             elif p == -1:
                 p = i
-            elif self.t[i][self.m+self.n] / self.t[i][q] < self.t[p][self.m+self.n] / self.t[p][q]:
+            elif (self.t[i][self.m+self.n] / self.t[i][q]) < (self.t[p][self.m+self.n] / self.t[p][q]):
                 p = i
         return p
 
