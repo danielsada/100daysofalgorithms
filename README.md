@@ -25,7 +25,7 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [x] Graham scan
  - [x] binary heaps
  - [x] binary search trees
- - [x]  kd-trees
+ - [x] kd-trees
  - [x] red−black trees
  - [x] depth-first search
  - [x] breadth-first search
@@ -48,10 +48,13 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] run-length coding
  - [X] Huffman coding
  - [X] LZW compression 
-
- Extra:
-
- - [x]
+ 
+ Machine Learning
+ - [X] Linear Regression
+ - [X] Training and Loss
+ - [X] Gradient Descent
+ - [X] Learning Rates and Batch vs Stochastic learning.
+ - [ ] Tensorflow implemented linear regression.
 
 # Day to Day log.
 
