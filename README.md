@@ -54,7 +54,10 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] Training and Loss
  - [X] Gradient Descent
  - [X] Learning Rates and Batch vs Stochastic learning.
- - [ ] Tensorflow implemented linear regression.
+ - [X] Tensorflow implemented linear regression.
+
+Syntax Matching
+- [X] Syntax matching for atomlike editors.
 
 # Day to Day log.
 
@@ -282,6 +285,67 @@ Day 55:
 Day 56: 
 - [x] Finished Boyer-Moore
 - [x] Updated logbook.
+
+Day 57:
+- [x] Boyer-Moore Tests
+- [x] KMP and Boyer-Moore benchmarking start
+
+ Day 58:
+- [x] Boyer moore UT finished.
+- [x] Benchmarks: (I expected find to win as it is implemented in CPython)
+BoyerMoore took 0.655519962310791 secs. Find took 0.006417036056518555 secs. KnuthMP took 0.8751339912414551 secs
+
+Day 59:
+- [x] Learned about Rabin-Karp hashtag substring search, and run time length encoding. 
+
+Day 60:
+- [x] Started BinaryStreams API and Unit tests. This gives way to Data Compression algorithms.
+
+Day 61:
+- [x] Learned about Huffman Compression with Shannon-Fano codes (which has a 4.7 bits/char rating),
+- [x] Learned about Lempel-Ziv-Welch compression. (which has a 3.32 bits/char rating)
+
+Day 62:
+- [x] BREAK
+
+Day 63:
+- [x] Worked on learning Linear Programming, with Brewers problem for solving maximization of variables with constraints.
+
+Day 64:
+- [x] Started implementing Simplex algorithm. Simplex let's you maximize profits, given a set of constraints.
+
+Day 65:
+- [x] Finished simplex.
+
+Day 66:
+- [x] Tensorflow start. Learning from Google's crash course of machine learning.
+- [x] Learned about linear regressions 
+- [x] Stochastic gradient descent
+
+Day 67:
+- [x] First Tensorflow program (linear)
+
+Day 68:
+- [x] Mock interviews with Interviewing.io (stack problam and preorder traversal)
+
+Day 69:
+- [x] Dynamic programming lessons. Reviewing past problems.
+
+Day 70:
+- [x] Learned about Generalization, Validation, Training and Test sets for machine learning.
+
+Day 71:
+- [x] Coding exercise on Jupyter notebook on Model Validation. 
+
+Day 72:
+- [x] Started to learn how to do syntax highlighting for @code working on porting @todotxt 
+
+Day 73:
+- [x] BREAK. Finals week.
+
+Day 74:
+- [x] Finished Syntax highliting, got into a roadblock but learned what I wanted to learn.
+
 
 
 Things to implement when finished researching regular algorithms (due to the time they take)
