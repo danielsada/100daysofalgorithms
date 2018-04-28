@@ -57,7 +57,7 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] Tensorflow implemented linear regression.
 
 Syntax Matching
-- [X] Syntax matching for atomlike editors.
+- [X] Syntax matching for atomlike editors. 
 
 # Day to Day log.
 
