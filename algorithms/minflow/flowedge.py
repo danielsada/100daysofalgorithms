@@ -10,7 +10,7 @@ class FlowEdge:
     """
 
     def __init__(self, v, w, capacity, flow=0.0, epilson=0.0001):
-        self.v = v
+        self.v = v  
         self.w = w
         self.cap = capacity
         self.flow = flow

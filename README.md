@@ -48,6 +48,7 @@ python3 -m unittest discover algorithms/test -p '*.py'
  - [X] run-length coding
  - [X] Huffman coding
  - [X] LZW compression 
+ - [x] Ford fulkerson flow graphs.
  
  Machine Learning
  - [X] Linear Regression
@@ -346,7 +347,24 @@ Day 73:
 Day 74:
 - [x] Finished Syntax highliting, got into a roadblock but learned what I wanted to learn.
 
+Day 75:
+- [x] Worked on FordFulkerson algorithm for Max-Flow and Capacity (Max Flow, Min Cut)
 
+Day 76:
+- [x]  Worked on a flow network implementation for implementing the FordFulkerson algorithm.
+
+Day 77:
+- [x] Experimented a bit with CORS headers, kept working on the Ford-Fulkerson Algorithm
+
+Day 78:     
+- [x] Micro service deployment architectures, 
+- [x] I'm trying to enable CORS between all of them. Hell raised. I know CORS is for security, but DAMN.
+
+Day 79:
+- [x] Worked on a phong shader & a yaw and pitch camera based on Euler angles using quaternions. (private repo)
+
+Day 80:
+- [x] Cleaned up project, pausing for internship.
 
 Things to implement when finished researching regular algorithms (due to the time they take)
  - [ ] Ford Fulkerson

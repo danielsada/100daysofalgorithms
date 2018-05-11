@@ -12,6 +12,7 @@ class FlowNetWork:
     def __init__(self, v):
         self.V = v
         self.E = 0
+        self.adj = []
         for i in range(0, self.V):
             self.adj[i] = []
 
@@ -29,8 +30,8 @@ class FlowNetWork:
         self.adj[v].append(w)
         self.adj[w].append(v)
         self.E += 1
-    
+
     def edges(self):
         for i in range(self.V):
-            for e in self.adj[v]:
+            for e in self.adj[i]:
                 yield e
