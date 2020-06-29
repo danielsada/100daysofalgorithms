@@ -3,7 +3,7 @@ from .rbtnode import RBTNode
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
-__email__ = "yo@danielsada.mx"
+__email__ = "hello@danielsada.tech"
 
 """
 A clean implementation of a Red Black Tree

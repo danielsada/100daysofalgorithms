@@ -4,7 +4,7 @@ from algorithms.bfs.bfs import BreadthFirstPaths
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
-__email__ = "yo@danielsada.mx"
+__email__ = "hello@danielsada.tech"
 
 """
 Test for correct dfs between paths. 

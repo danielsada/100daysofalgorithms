@@ -3,7 +3,7 @@ import random
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
-__email__ = "yo@danielsada.mx"
+__email__ = "hello@danielsada.tech"
 
 
 class QuickSort:

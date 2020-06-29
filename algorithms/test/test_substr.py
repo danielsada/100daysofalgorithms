@@ -6,7 +6,7 @@ import unittest
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
-__email__ = "yo@danielsada.mx"
+__email__ = "hello@danielsada.tech"
 
 
 class SubStrTest(unittest.TestCase):
@@ -28,10 +28,10 @@ class SubStrTest(unittest.TestCase):
             kmp.search(shakespeare.lower())
             lenKMP = len(kmp.matches)
             kmpEnd = time.time()
-            print(
-                f"Boyer took #{boyerEnd - boyerStart} with #{lenShake} matches")
-            print(f"Find took #{pyEnd - pyStart } with #{lenPy} matches")
-            print(f"KMP took {kmpEnd-kmpStart} with #{lenKMP} matches")
+            # print(
+            #     f"Boyer took #{boyerEnd - boyerStart} with #{lenShake} matches")
+            # print(f"Find took #{pyEnd - pyStart } with #{lenPy} matches")
+            # print(f"KMP took {kmpEnd-kmpStart} with #{lenKMP} matches")
             self.assertEqual(lenPy, lenShake+1, lenKMP-1)
 
     def test_basic_substr(self):
@@ -45,7 +45,7 @@ class SubStrTest(unittest.TestCase):
     And only herald to the gaudy spring,
     Within thine own bud buriest thy content,""")
 
-        print(bm.matches)
+        # print(bm.matches)
         kmp = KnuthMorrisPratt("thou")
         kmp.search(""" His tender heir might bear his memory:
     But thou contracted to thine own bright eyes,
@@ -55,7 +55,7 @@ class SubStrTest(unittest.TestCase):
     Thou that art now the world's fresh ornament,
     And only herald to the gaudy spring,
     Within thine own bud buriest thy content,""".lower())
-        print(kmp.matches)
+        # print(kmp.matches)
         self.assertEqual(len(kmp.matches)-1, len(bm.matches))
 
 

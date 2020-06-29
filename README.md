@@ -7,7 +7,7 @@ Hello! I'm Daniel Sada. I've covered most of this algorithms in classes before, 
 Clone the project, then run :
 
 ```
-python3 -m unittest discover algorithms/test -p '*.py'
+python -m unittest discover algorithms/test -v
 ```
 
 # Topics to cover:
@@ -358,13 +358,20 @@ Day 77:
 
 Day 78:     
 - [x] Micro service deployment architectures, 
-- [x] I'm trying to enable CORS between all of them. Hell raised. I know CORS is for security, but DAMN.
+- [x] I'm trying to enable CORS between all of them. Hell raised. I know CORS is for security, but whoa..
 
 Day 79:
 - [x] Worked on a phong shader & a yaw and pitch camera based on Euler angles using quaternions. (private repo)
 
 Day 80:
 - [x] Cleaned up project, pausing for internship.
+
+Day 81:
+- [x] Renamed tests to be auto-discoverable, adding more tests to the suite, removing print statements from all the sides so we get a clean test pass.
+- [ ] Starting astar algorithm,
+- [ ] Changing email to correct one 
+
+
 
 Things to implement when finished researching regular algorithms (due to the time they take)
  - [ ] Ford Fulkerson

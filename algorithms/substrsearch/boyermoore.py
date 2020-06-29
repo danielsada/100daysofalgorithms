@@ -1,7 +1,7 @@
 
 __author__ = "Daniel Sada"
 __license__ = "MIT Licence"
-__email__ = "yo@danielsada.mx"
+__email__ = "hello@danielsada.tech"
 
 from collections import defaultdict
 
@@ -23,8 +23,8 @@ class BoyerMoore:
                 self.letterDict[v] = self.M
             else:
                 self.letterDict[v] = self.M - i - 1
-            print(i, v, self.M - i - 1)
-        print(self.letterDict)
+            # print(i, v, self.M - i - 1)
+        # print(self.letterDict)
 
     def search(self, haystack):
         self.N = len(haystack)
