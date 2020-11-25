@@ -463,84 +463,82 @@ coverage report
 coverage html
 ```
 
-## Name Stmts Miss Cover
+Initial values:
 
-algorithms\bfs\_\_init**.py 1 0 100%
-algorithms\bfs\bfs.py 32 9 72%
-algorithms\binarysearchtree\_\_init**.py 0 0 100%
-algorithms\binarysearchtree\bst.py 148 33 78%
-algorithms\binarysearchtree\bstnode.py 9 0 100%
-algorithms\binarysearchtree\rbtnode.py 10 0 100%
-algorithms\binarysearchtree\redblacktree.py 158 47 70%
-algorithms\dfs\_\_init**.py 4 0 100%
-algorithms\dfs\bipartitedfs.py 41 4 90%
-algorithms\dfs\connected_components.py 26 1 96%
-algorithms\dfs\dfs.py 29 9 69%
-algorithms\dfs\topologicalsort.py 22 1 95%
-algorithms\digraph\_\_init**.py 1 0 100%
-algorithms\digraph\digraph.py 27 10 63%
-algorithms\heaps\_\_init**.py 3 0 100%
-algorithms\heaps\heap.py 34 0 100%
-algorithms\heaps\maxheap.py 53 8 85%
-algorithms\heaps\minheap.py 39 4 90%
-algorithms\mst\_\_init**.py 0 0 100%
-algorithms\mst\prim.py 37 0 100%
-algorithms\priorityqueue\_\_init**.py 2 0 100%
-algorithms\priorityqueue\indexminpq.py 65 19 71%
-algorithms\priorityqueue\priorityqueue.py 20 2 90%
-algorithms\shortestpaths\_\_init**.py 0 0 100%
-algorithms\shortestpaths\bellmanford.py 41 8 80%
-algorithms\shortestpaths\dijkstra.py 64 34 47%
-algorithms\sorts\_\_init**.py 0 0 100%
-algorithms\sorts\insertionsort.py 20 0 100%
-algorithms\sorts\mergesort.py 33 2 94%
-algorithms\sorts\quicksort.py 27 0 100%
-algorithms\sorts\selectionsort.py 21 1 95%
-algorithms\sorts\shellsort.py 26 0 100%
-algorithms\stack\_\_init**.py 0 0 100%
-algorithms\stack\stack_parenthesis_check.py 27 5 81%
-algorithms\stringsorts\LSDradixsort.py 20 0 100%
-algorithms\stringsorts\MSDradixsort.py 32 1 97%
-algorithms\stringsorts\_\_init**.py 0 0 100%
-algorithms\stringsorts\threewayradixsort.py 20 1 95%
-algorithms\substrsearch\_\_init**.py 0 0 100%
-algorithms\substrsearch\boyermoore.py 36 0 100%
-algorithms\substrsearch\kmp.py 35 0 100%
-algorithms\test\test_astar.py 18 1 94%
-algorithms\test\test_bfs.py 18 1 94%
-algorithms\test\test_binarystream.py 10 1 90%
-algorithms\test\test_bst.py 67 1 99%
-algorithms\test\test_dfs.py 75 1 99%
-algorithms\test\test_digraph.py 12 1 92%
-algorithms\test\test_heap.py 64 1 98%
-algorithms\test\test_mst.py 30 1 97%
-algorithms\test\test_prioirtyqueue.py 29 1 97%
-algorithms\test\test_redblack.py 34 1 97%
-algorithms\test\test_shortestpath.py 41 1 98%
-algorithms\test\test_sorting.py 59 1 98%
-algorithms\test\test_stack.py 16 0 100%
-algorithms\test\test_stringsort.py 38 1 97%
-algorithms\test\test_substr.py 35 1 97%
-algorithms\test\test_trie.py 29 1 97%
-algorithms\test\test_ugraph.py 14 1 93%
-algorithms\test\test_unionfind.py 68 1 99%
-algorithms\test\test_wgraph.py 27 1 96%
-algorithms\tries\rwaytries.py 35 1 97%
-algorithms\tries\tstries.py 44 1 98%
-algorithms\ugraph\_\_init**.py 1 0 100%
-algorithms\ugraph\ugraph.py 22 1 95%
-algorithms\unionfind\_\_init**.py 1 0 100%
-algorithms\unionfind\pathflattenedunionfind.py 24 0 100%
-algorithms\unionfind\quickfind.py 16 0 100%
-algorithms\unionfind\quickunion.py 18 0 100%
-algorithms\unionfind\weightedunionfind.py 23 0 100%
-algorithms\weightedgraph\_\_init\_\_.py 4 0 100%
-algorithms\weightedgraph\diedge.py 14 1 93%
-algorithms\weightedgraph\diweightedgraph.py 25 9 64%
-algorithms\weightedgraph\edge.py 20 2 90%
-algorithms\weightedgraph\weightedgraph.py 31 6 81%
-
----
+| Name                                           | Stmts | Miss | Cover |
+| ---------------------------------------------- | ----- | ---- | ----- |
+| algorithms\bfs\_\_init\_\_.py                  | 1     | 0    | 100%  |
+| algorithms\bfs\bfs.py                          | 32    | 9    | 72%   |
+| algorithms\binarysearchtree\_\_init\_\_.py     | 0     | 0    | 100%  |
+| algorithms\binarysearchtree\bst.py             | 148   | 33   | 78%   |
+| algorithms\binarysearchtree\bstnode.py         | 9     | 0    | 100%  |
+| algorithms\binarysearchtree\rbtnode.py         | 10    | 0    | 100%  |
+| algorithms\binarysearchtree\redblacktree.py    | 158   | 47   | 70%   |
+| algorithms\dfs\_\_init\_\_.py                  | 4     | 0    | 100%  |
+| algorithms\dfs\bipartitedfs.py                 | 41    | 4    | 90%   |
+| algorithms\dfs\connected_components.py         | 26    | 1    | 96%   |
+| algorithms\dfs\dfs.py                          | 29    | 9    | 69%   |
+| algorithms\dfs\topologicalsort.py              | 22    | 1    | 95%   |
+| algorithms\digraph\_\_init\_\_.py              | 1     | 0    | 100%  |
+| algorithms\digraph\digraph.py                  | 27    | 10   | 63%   |
+| algorithms\heaps\_\_init\_\_.py                | 3     | 0    | 100%  |
+| algorithms\heaps\heap.py                       | 34    | 0    | 100%  |
+| algorithms\heaps\maxheap.py                    | 53    | 8    | 85%   |
+| algorithms\heaps\minheap.py                    | 39    | 4    | 90%   |
+| algorithms\mst\_\_init\_\_.py                  | 0     | 0    | 100%  |
+| algorithms\mst\prim.py                         | 37    | 0    | 100%  |
+| algorithms\priorityqueue\_\_init\_\_.py        | 2     | 0    | 100%  |
+| algorithms\priorityqueue\indexminpq.py         | 65    | 19   | 71%   |
+| algorithms\priorityqueue\priorityqueue.py      | 20    | 2    | 90%   |
+| algorithms\shortestpaths\_\_init\_\_.py        | 0     | 0    | 100%  |
+| algorithms\shortestpaths\bellmanford.py        | 41    | 8    | 80%   |
+| algorithms\shortestpaths\dijkstra.py           | 64    | 34   | 47%   |
+| algorithms\sorts\_\_init\_\_.py                | 0     | 0    | 100%  |
+| algorithms\sorts\insertionsort.py              | 20    | 0    | 100%  |
+| algorithms\sorts\mergesort.py                  | 33    | 2    | 94%   |
+| algorithms\sorts\quicksort.py                  | 27    | 0    | 100%  |
+| algorithms\sorts\selectionsort.py              | 21    | 1    | 95%   |
+| algorithms\sorts\shellsort.py                  | 26    | 0    | 100%  |
+| algorithms\stack\_\_init\_\_.py                | 0     | 0    | 100%  |
+| algorithms\stack\stack_parenthesis_check.py    | 27    | 5    | 81%   |
+| algorithms\stringsorts\LSDradixsort.py         | 20    | 0    | 100%  |
+| algorithms\stringsorts\MSDradixsort.py         | 32    | 1    | 97%   |
+| algorithms\stringsorts\_\_init\_\_.py          | 0     | 0    | 100%  |
+| algorithms\stringsorts\threewayradixsort.py    | 20    | 1    | 95%   |
+| algorithms\substrsearch\_\_init\_\_.py         | 0     | 0    | 100%  |
+| algorithms\substrsearch\boyermoore.py          | 36    | 0    | 100%  |
+| algorithms\substrsearch\kmp.py                 | 35    | 0    | 100%  |
+| algorithms\test\test_astar.py                  | 18    | 1    | 94%   |
+| algorithms\test\test_bfs.py                    | 26    | 1    | 96%   |
+| algorithms\test\test_binarystream.py           | 10    | 1    | 90%   |
+| algorithms\test\test_bst.py                    | 67    | 1    | 99%   |
+| algorithms\test\test_dfs.py                    | 75    | 1    | 99%   |
+| algorithms\test\test_digraph.py                | 12    | 1    | 92%   |
+| algorithms\test\test_heap.py                   | 64    | 1    | 98%   |
+| algorithms\test\test_mst.py                    | 30    | 1    | 97%   |
+| algorithms\test\test_prioirtyqueue.py          | 29    | 1    | 97%   |
+| algorithms\test\test_redblack.py               | 34    | 1    | 97%   |
+| algorithms\test\test_shortestpath.py           | 41    | 1    | 98%   |
+| algorithms\test\test_sorting.py                | 59    | 1    | 98%   |
+| algorithms\test\test_stack.py                  | 16    | 0    | 100%  |
+| algorithms\test\test_stringsort.py             | 38    | 1    | 97%   |
+| algorithms\test\test_substr.py                 | 35    | 1    | 97%   |
+| algorithms\test\test_trie.py                   | 29    | 1    | 97%   |
+| algorithms\test\test_wgraph.py                 | 27    | 1    | 96%   |
+| algorithms\tries\rwaytries.py                  | 35    | 1    | 97%   |
+| algorithms\tries\tstries.py                    | 44    | 1    | 98%   |
+| algorithms\ugraph\_\_init\_\_.py               | 1     | 0    | 100%  |
+| algorithms\ugraph\ugraph.py                    | 22    | 1    | 95%   |
+| algorithms\unionfind\_\_init\_\_.py            | 1     | 0    | 100%  |
+| algorithms\unionfind\pathflattenedunionfind.py | 24    | 0    | 100%  |
+| algorithms\unionfind\quickfind.py              | 16    | 0    | 100%  |
+| algorithms\unionfind\quickunion.py             | 18    | 0    | 100%  |
+| algorithms\unionfind\weightedunionfind.py      | 23    | 0    | 100%  |
+| algorithms\weightedgraph\_\_init\_\_.py        | 4     | 0    | 100%  |
+| algorithms\weightedgraph\diedge.py             | 14    | 1    | 93%   |
+| algorithms\weightedgraph\diweightedgraph.py    | 25    | 9    | 64%   |
+| algorithms\weightedgraph\edge.py               | 20    | 2    | 90%   |
+| algorithms\weightedgraph\weightedgraph.py      | 31    | 6    | 81%   |
 
 For the following days, I'll keep adding coverage up to 100%
 
