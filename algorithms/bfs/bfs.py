@@ -8,9 +8,9 @@ __email__ = "hello@danielsada.tech"
 class BreadthFirstPaths:
     """"
 This is a Breadth First Search.
-This will also calculate the distances 
+This will also calculate the distances
 between the nodes preemptively.
-Finds a path between start s, and all other indexes. 
+Finds a path between start s, and all other indexes.
 Then query it to see if there is a path between two nodes.
     """
 
