@@ -542,7 +542,13 @@ Initial values:
 
 For the following days, I'll keep adding coverage up to 100%
 
-- [x] Improved BFS coverage to 100% from 72%
+- [x] Improved BFS coverage to 92% from 72%
+
+Day 83:
+
+- [x] Improved BFS coverage from 92% to 100%
+- [x] Improved BST coverage from 78% to 93% and fixed bugs caught by UTs
+
 
 Things to implement when finished researching regular algorithms (due to the time they take)
 
