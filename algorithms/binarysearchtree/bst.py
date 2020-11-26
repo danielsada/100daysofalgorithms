@@ -58,12 +58,16 @@ class BinarySearchTree:
         return None
 
     def getMaxElem(self):
+        if self.size(self.root) == 0:
+            return None
         elem = self.root
         while elem is not None and elem.right is not None:
             elem = elem.right
         return elem.item
 
     def getMinElem(self):
+        if self.size(self.root) == 0:
+            return None
         elem = self.root
         while elem is not None and elem.left is not None:
             elem = elem.left
@@ -118,8 +122,15 @@ class BinarySearchTree:
     def sizeAtRoot(self):
         return self.size(self.root)
 
+    """
+    Returns True if it was deleted, false if it failed to delete it.
+    """
+
     def deleteMin(self):
+        if self.size(self.root) == 0:
+            return False
         self.root = self._deleteMinHelper(self.root)
+        return True
 
     def _deleteMinHelper(self, node):
         if node.left is None:
@@ -132,6 +143,12 @@ class BinarySearchTree:
         self._delete(self.root, key)
 
     def _delete(self, node, key):
+        if self.sizeAtRoot() == 1:
+            self.root = None
+            self.inorder_arr = []
+            self.i = 0
+            self.count = 0
+            return None
         if node is None:
             return None
         xk, _ = node.item
@@ -145,18 +162,8 @@ class BinarySearchTree:
                 return node.left
             if node.left is None:
                 return node.right
-            tempNode = node
-            node = self._minelemfromNode(tempNode.right)
-            node.right = self._deleteMinHelper(node)
-            node.left = tempNode.left
         node.count = self._computeSize(node)
         return node
-
-    def _minelemfromNode(self, node):
-        if node.left is None:
-            return node
-        else:
-            return self._minelemfromNode(node.left)
 
     def _computeSize(self, node):
         sz_node_right = self.size(node.right) if self.size(

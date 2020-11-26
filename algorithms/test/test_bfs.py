@@ -36,6 +36,7 @@ class TestBFS(unittest.TestCase):
         self.assertTrue(bfs.hasPathTo(3))
         self.assertEqual(bfs.pathTo(3), [3, 2, 1, 0])
         self.assertFalse(bfs.hasPathTo(5))
+        self.assertIsNone(bfs.pathTo(5))
 
 
 if __name__ == '__main__':

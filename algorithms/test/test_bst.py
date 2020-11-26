@@ -7,6 +7,9 @@ __email__ = "hello@danielsada.tech"
 
 """
 Test Binary search trees.
+Run uts with 
+python -m unittest algorithms.test.test_bst
+
 """
 
 
@@ -21,6 +24,10 @@ class BSTTest(unittest.TestCase):
         self.thirdbst.put(('d', "more friendo"))
         self.thirdbst.put(('j', "incredible"))
         self.forthBst = BinarySearchTree()
+        self.alphaIterator = BinarySearchTree()
+        for k, v in enumerate(list(map(chr, range(97, 123)))):
+            self.alphaIterator.put((k, v))
+        self.emptyTree = BinarySearchTree()
 
     def test_all_letters(self):
         """Test the alphabet darlin'"""
@@ -66,7 +73,11 @@ class BSTTest(unittest.TestCase):
         test.put(('e', "www.e"))
         test.put(('w', "www.w"))
         test.delete('e')
+        test.delete('w')
+        test.delete('a')
         self.assertIsNone(test.get('e'))
+        self.assertIsNone(test.get('w'))
+        self.assertIsNone(test.get('a'))
 
     def test_bst_with_proven_example(self):
         """
@@ -95,6 +106,20 @@ class BSTTest(unittest.TestCase):
         self.assertEqual(len(levelOrder), 10)
         self.assertEqual(levelOrder[0], ('S', 0))
         self.assertEqual(levelOrder[9], ('P', 10))
+
+    def test_iterator(self):
+        listResult = []
+        for elem in self.alphaIterator:
+            listResult.append(elem[1])
+        self.assertEqual(len(listResult), 26)
+
+    def test_empty(self):
+        self.assertIsNone(self.emptyTree.getMinElem())
+        self.assertIsNone(self.emptyTree.getMaxElem())
+        self.assertIsNone(self.emptyTree.floor('a'))
+        self.assertIsNone(self.emptyTree.ceiling('z'))
+        self.assertFalse(self.emptyTree.deleteMin())
+        self.assertEqual(self.emptyTree.sizeAtRoot(), 0)
 
 
 if __name__ == '__main__':
