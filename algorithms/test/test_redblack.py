@@ -7,10 +7,12 @@ __email__ = "hello@danielsada.tech"
 
 """
 Test Binary search trees.
+python -m unittest algorithms.test.test_redblack
+
 """
 
 
-class BSTTest(unittest.TestCase):
+class RedBlackTreeTest(unittest.TestCase):
     def setUp(self):
         self.bst = RedBlackTree()
         self.secondbst = RedBlackTree()
@@ -21,6 +23,10 @@ class BSTTest(unittest.TestCase):
         self.thirdbst.put(('d', "more friendo"))
         self.thirdbst.put(('j', "incredible"))
         self.forthBst = RedBlackTree()
+        self.alphaIterator = RedBlackTree()
+        for k, v in enumerate(list(map(chr, range(97, 123)))):
+            self.alphaIterator.put((k, v))
+        self.emptyTree = RedBlackTree()
 
     def test_all_letters(self):
         """Test the alphabet darlin'"""
@@ -65,7 +71,6 @@ class BSTTest(unittest.TestCase):
         test.put(('s', "www"))
         test.put(('e', "www.e"))
         test.put(('a', "www.w"))
-        # print(test.root)
         test.delete('e')
         self.assertIsNone(test.get('e'))
 
@@ -96,6 +101,29 @@ class BSTTest(unittest.TestCase):
     #     self.assertEqual(len(levelOrder), 10)
     #     self.assertEqual(levelOrder[0], ('S', 0))
         # self.assertEqual(levelOrder[9], ('P', 10))
+    def test_iterator(self):
+        listResult = []
+        for elem in self.alphaIterator:
+            listResult.append(elem[1])
+        self.assertEqual(len(listResult), 26)
+
+    def test_empty(self):
+        self.assertIsNone(self.emptyTree.getMinElem())
+        self.assertIsNone(self.emptyTree.getMaxElem())
+        self.assertEqual(self.emptyTree.size(self.emptyTree.root), 0)
+
+    def test_deletion(self):
+        """Test that when we delete a node, it really deletes"""
+        test = RedBlackTree()
+        test.put(('a', "www"))
+        test.put(('e', "www.e"))
+        test.put(('w', "www.w"))
+        test.delete('e')
+        test.delete('w')
+        # test.delete('a')
+        self.assertIsNone(test.get('e'))
+        # self.assertIsNone(test.get('w'))
+        # self.assertIsNone(test.get('a'))
 
 
 if __name__ == '__main__':

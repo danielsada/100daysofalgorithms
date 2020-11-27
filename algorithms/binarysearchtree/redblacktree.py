@@ -185,12 +185,16 @@ class RedBlackTree:  # Red Black Tree
         return None
 
     def getMaxElem(self):
+        if self.size(self.root) == 0:
+            return None
         elem = self.root
         while elem is not None and elem.right is not None:
             elem = elem.right
         return elem.item
 
     def getMinElem(self):
+        if self.size(self.root) == 0:
+            return None
         elem = self.root
         while elem is not None and elem.left is not None:
             elem = elem.left

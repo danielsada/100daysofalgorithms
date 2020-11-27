@@ -549,6 +549,10 @@ Day 83:
 - [x] Improved BFS coverage from 92% to 100%
 - [x] Improved BST coverage from 78% to 93% and fixed bugs caught by UTs
 
+Day 84:
+
+- [x] Improved red black tree coverage from 70% to 79% there is a lot of work remaining
+to make them awesome.
 
 Things to implement when finished researching regular algorithms (due to the time they take)
 
