@@ -551,8 +551,11 @@ Day 83:
 
 Day 84:
 
-- [x] Improved red black tree coverage from 70% to 79% there is a lot of work remaining
-to make them awesome.
+- [x] Improved red black tree coverage from 70% to 79% there is a lot of work remaining to make them awesome.
+
+Day 85:
+- [x] Added basic tests to Bellman-Ford. 
+- [x] Started working on Ford-Fulkerson and examples of the min-flow max-cut theorem, code right now is partially done, and hopefully ready to be advanced.
 
 Things to implement when finished researching regular algorithms (due to the time they take)
 

@@ -31,21 +31,33 @@ class TestSP(unittest.TestCase):
         aO.addEdge(DiEdge(3, 6, 0.52))
         aO.addEdge(DiEdge(6, 0, 0.58))
         aO.addEdge(DiEdge(6, 4, 0.93))
-        self.anotherOne = aO
+        self.a0 = aO
+        a1 = DirectedWeightedGraph(5)
+        a1.addEdge(DiEdge(0, 1, -1))
+        a1.addEdge(DiEdge(1,3, -5))
+        a1.addEdge(DiEdge(0,2, 1))
+        a1.addEdge(DiEdge(2,3, 2))
+        self.a1 = a1
+
 
     def test_dijkstra(self):
         weights = [0, 1.05, 0.26, 0.99, 0.38, 0.73, 1.51, 0.60]
-        d = DijkstraSP(self.anotherOne, 0)
+        d = DijkstraSP(self.a0, 0)
         for t in range(0, 8):
             if d.hasPathTo(t):
                 self.assertAlmostEqual(d.distTo[t], weights[t], delta=0.01)
 
     def test_bellman_ford(self):
         weights = [0, 1.05, 0.26, 0.99, 0.38, 0.73, 1.51, 0.60]
-        d = BellmanFord(self.anotherOne, 0)
+        d = BellmanFord(self.a0, 0)
         for t in range(0, 8):
             if d.hasPathTo(t):
                 self.assertAlmostEqual(d.distTo[t], weights[t], delta=0.01)
+
+    def test_bellman_ford_negative(self):
+        d = BellmanFord(self.a1, 0)
+        self.assertEqual(True, d.hasPathTo(3))
+        print(d.pathTo(3))
 
 
 if __name__ == '__main__':
