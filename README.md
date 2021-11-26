@@ -557,7 +557,13 @@ Day 85:
 - [x] Added basic tests to Bellman-Ford. 
 - [x] Started working on Ford-Fulkerson and examples of the min-flow max-cut theorem, code right now is partially done, and hopefully ready to be advanced.
 
-Things to implement when finished researching regular algorithms (due to the time they take)
+Day 86:
+
+- [x] Implement matrix multiplication in preparation for fibbonaci "investigation"
+- [x] Tests for matrix multiplication
+
+
+## Things to implement when finished researching regular algorithms (due to the time they take)
 
 - [ ] Ford Fulkerson
 - [ ] Graham scan
