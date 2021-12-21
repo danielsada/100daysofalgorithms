@@ -13,7 +13,7 @@ class FordFulkerson:
 
     def __init__(self, g: FlowNetwork, s, t):
         """ S is the source vertex, t is the sink vertex."""
-        self.V = g.V()
+        self.V = g.V
         self.g = g
         self.marked = [False]*self.V
         self.edgeTo = []*self.V
