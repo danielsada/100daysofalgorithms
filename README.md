@@ -562,6 +562,10 @@ Day 86:
 - [x] Implement matrix multiplication in preparation for fibbonaci "investigation"
 - [x] Tests for matrix multiplication
 
+Day 87: 
+- [x] Messing around with re-implementing BoyerMoore
+- [x] Try to implement it from scratch and memory.
+
 
 ## Things to implement when finished researching regular algorithms (due to the time they take)
 
