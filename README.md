@@ -566,6 +566,10 @@ Day 87:
 - [x] Messing around with re-implementing BoyerMoore
 - [x] Try to implement it from scratch and memory.
 
+Day 88:
+- [x] Implemented sliding window to find permutation
+- [x] Added inline UTs for sliding window
+
 
 ## Things to implement when finished researching regular algorithms (due to the time they take)
 
