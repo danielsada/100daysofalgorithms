@@ -581,19 +581,6 @@ Day 90:
 Day 91:
 - [x] Started learning Intervals, implemented given a set of intervals, merge them.
 
-
-## Things to implement when finished researching regular algorithms (due to the time they take)
-
-- [ ] Ford Fulkerson
-- [ ] Graham scan
-- [ ] Kd-trees
-
-TODO after all algorithms:
-
-- [ ] Determine complexities
-- [ ] Add docstrings to tests
-- [ ] Burrows−Wheeler transform.
-
-# Links
-
-## I will fill this as soon as I finish
+Day 92:
+- [x] Find if given some intervals, a given person can attend all meetings.
+- [x] Add BFS and DFS Kata, to keep both fresh. - A kata usually is something you can practice repeatedly to get quick with implementing certain patterns.
