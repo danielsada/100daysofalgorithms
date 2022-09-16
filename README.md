@@ -588,3 +588,7 @@ Day 92:
 Day 93:
 - [x] Started guidesheet with most common algorithms from Grokking.
 - [x] Started islands problem with DFS. 
+
+Day 94:
+- [x] Added islands for finding islands in a lake, a simple application of DFS with UTs
+- [x] Added a couple of linked-list exercises (reversal, middle) to keep memory fresh, with UTs.

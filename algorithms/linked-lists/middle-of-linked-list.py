@@ -18,3 +18,25 @@ Example 2:
 Input: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> null
 Output: 4
 """
+import unittest
+
+class Node():
+    def __init__(self, node = None, value = None):
+        self.next = node
+        self.value = value
+    def __repr__(self) -> str:
+        return f"Node value: {self.value}"
+
+
+def find_middle_linked_list(head):
+    slow, fast = head, head
+    while fast is not None and fast.next is not None:
+        slow, fast = slow.next, fast.next.next
+    return slow.value
+
+class TestLinkedList(unittest.TestCase):
+    def test_linkedlist(self):
+        linkedList = Node(Node(Node(Node(Node(None, 1), 2), 3), 4), 5)
+        self.assertEqual(find_middle_linked_list(linkedList), 3)
+
+
