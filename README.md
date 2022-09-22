@@ -592,3 +592,7 @@ Day 93:
 Day 94:
 - [x] Added islands for finding islands in a lake, a simple application of DFS with UTs
 - [x] Added a couple of linked-list exercises (reversal, middle) to keep memory fresh, with UTs.
+
+Day 95:
+= [x] Implemented middle of a stream problem with two heaps, found out that maxheaps in python are just negative minheaps
+- [x] Started subsets exercises.
