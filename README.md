@@ -594,5 +594,9 @@ Day 94:
 - [x] Added a couple of linked-list exercises (reversal, middle) to keep memory fresh, with UTs.
 
 Day 95:
-= [x] Implemented middle of a stream problem with two heaps, found out that maxheaps in python are just negative minheaps
+- [x] Implemented middle of a stream problem with two heaps, found out that maxheaps in python are just negative minheaps
 - [x] Started subsets exercises.
+
+Day 96:
+- [x] Implemented subsets, and permutations the "easy" way.
+- [x] Investigated itertools for easy convenience to methods 
