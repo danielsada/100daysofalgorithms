@@ -600,3 +600,6 @@ Day 95:
 Day 96:
 - [x] Implemented subsets, and permutations the "easy" way.
 - [x] Investigated itertools for easy convenience to methods 
+
+Day 97:
+- [x] Explored some of the collection library in python, a bit of the oscure methods of deque, Counter, defaultdict and more. I already knew them, but getting more proficient with them
