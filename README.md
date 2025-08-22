@@ -603,3 +603,6 @@ Day 96:
 
 Day 97:
 - [x] Explored some of the collection library in python, a bit of the oscure methods of deque, Counter, defaultdict and more. I already knew them, but getting more proficient with them
+
+Day 98: 
+- [x] I've recently become interested in code "katas" specially in the era of LLMs, the brain can atrophy on these algos. I did a code kata of level print, Tries, sorts, etc. 
