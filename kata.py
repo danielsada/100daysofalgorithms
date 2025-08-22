@@ -117,12 +117,14 @@ def explore_post(curr):
 explore_post(root)
 
 # Stacks in python
-stack = []
-stack.append()
-stack.popright()
-stack.popright()
+from collections import deque
+q = deque()
+q.append('a')
+q.append('b')
+q.append('c')
+first_element = q.popleft()
 
-
+# Heaps in python
 import heapq
 
 # minheap
