@@ -170,18 +170,6 @@ print(stack)
 # Level ordering
 
 
-class TreeNode:
-    value = None
-    left, right = None, None
-
-    def __init__(self, value, left=None, right=None) -> None:
-        self.left, self.right = left, right
-        self.value = value
-
-    def __repr__(self) -> str:
-        return f"Node value: {self.value}"
-
-
 node = TreeNode(4)
 node.left = TreeNode(5, TreeNode(6), TreeNode(7))
 node.right = TreeNode(10)
@@ -280,3 +268,24 @@ class Trie:
             else:
                 return False
         return True
+
+
+sumtree = TreeNode(4)
+sumtree.left = TreeNode(5, TreeNode(6), TreeNode(7))
+sumtree.right = TreeNode(10)
+
+
+def recursion_helper(current_node):
+    print(current_node)
+    if current_node.left is None and current_node.right is None:
+        return current_node.value
+    return (
+        current_node.value
+        + recursion_helper(current_node.right)
+        + recursion_helper(current_node.left)
+    )
+
+
+def sum_tree(root):
+    return recursion_helper(root)
+
