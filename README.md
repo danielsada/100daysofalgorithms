@@ -1,23 +1,74 @@
 # 100daysofalgorithms
 
-Hello! I'm Daniel Sada. I've covered most of this algorithms in classes before, but I didn't implement them myself, and see what roadblocks I've got. I'm trying to do an algorithm or two a day or at least try to solve a problem a day. I'll be alternating between new algorithms and working in problems with those algorithms.
+Hello! I'm Daniel Sada. I had covered most of these algorithms in class, but
+wanted to implement them myself and record the roadblocks I encountered. This
+repository is a learning journal and collection of experiments, not a
+production-ready or dependable algorithm library.
 
-# Running unit tests.
+## Project status
 
-Clone the project, then run :
+The currently discovered test suite reports 62 passing tests, but whole-source
+coverage is only about 74%. Passing tests should not be interpreted as proof
+that every implementation works: several modules are not discovered by the
+suite, have weak assertions, or contain known defects.
 
-```
+Known incomplete or broken areas:
+
+- **Maximum flow:** [`fordfulkerson.py`](algorithms/minflow/fordfulkerson.py) is
+  a stub, and its
+  [test](algorithms/test/test_flownetwork.py) only asserts `True`.
+- **Graph algorithms:** BFS currently behaves depth-first and may return a
+  non-shortest path; undirected cycle detection can recurse indefinitely; and
+  directed cycle detection does not start correctly and reverses its result.
+- **Search trees:** BST size bookkeeping, ceiling traversal, and root deletion
+  are incorrect. Red-black-tree size bookkeeping is not implemented.
+- **Minimum spanning trees:** [`mst.py`](algorithms/mst/mst.py) fails during
+  import, its `__len__` and `__repr__` methods return nothing, and Kruskal
+  references a nonexistent `g.v`.
+- **Binary I/O:** [`binarystreams.py`](algorithms/binaryio/binarystreams.py)
+  mixes integers, bytes, and characters incorrectly; `isEmpty()` tests
+  readability rather than whether data remains.
+- **Explicit stubs:** breadth-first permutations and matrix-based Fibonacci are
+  unfinished.
+- **Other known defects:** selection sort fails for `[0, 1, 0]`; three-way
+  radix sort fails with duplicate strings; and directed weighted graph degree
+  calls a nonexistent `close()` method.
+- **Machine learning:** there is no dependency manifest, and
+  [`linearregression.py`](machinelearning/linearregression.py) depends on
+  obsolete TensorFlow 1 APIs such as `tf.logging` and `tf.contrib`.
+
+The strongest working areas include union-find, basic sorting, Prim's
+algorithm, tries, and traversal foundations. The priority for future work is
+consolidation: strengthen tests, repair known defects, and only then mark an
+implementation as complete.
+
+## Running unit tests
+
+Clone the project, then run:
+
+```sh
 python -m unittest discover algorithms/test -v
 ```
 
-# Topics to cover:
+For a whole-source coverage report:
+
+```sh
+python -m coverage run --source=algorithms -m unittest discover algorithms/test -v
+python -m coverage report
+```
+
+## Topics explored
+
+A checked item means the topic was studied or attempted during the journal; it
+does not guarantee a complete or correct implementation. Known unfinished
+topics are explicitly unchecked below.
 
 - [x] union-find
 - [x] binary search
 - [x] stacks
 - [x] queues
 - [x] insertion sort
-- [x] selection sort
+- [ ] selection sort (fails for some inputs with duplicate values)
 - [x] shellsort
 - [x] quicksort
 - [x] 3-way quicksort
@@ -25,21 +76,21 @@ python -m unittest discover algorithms/test -v
 - [x] heapsort
 - [x] Graham scan
 - [x] binary heaps
-- [x] binary search trees
+- [ ] binary search trees (known correctness defects)
 - [x] kd-trees
-- [x] red−black trees
+- [ ] red-black trees (size bookkeeping incomplete)
 - [x] depth-first search
-- [x] breadth-first search
+- [ ] breadth-first search (does not currently guarantee shortest paths)
 - [x] topological sort
 - [x] Kosaraju−Sharir
-- [x] Kruskal
+- [ ] Kruskal (current implementation is broken)
 - [x] Prim
 - [x] Dijkistra
 - [x] Bellman−Ford
-- [x] Ford−Fulkerson
+- [ ] Ford-Fulkerson (stub)
 - [x] LSD radix sort
 - [x] MSD radix sort
-- [x] 3-way radix quicksort
+- [ ] 3-way radix quicksort (fails with duplicate strings)
 - [x] multiway tries
 - [x] ternary search tries
 - [x] Knuth−Morris−Pratt
@@ -49,7 +100,7 @@ python -m unittest discover algorithms/test -v
 - [x] run-length coding
 - [x] Huffman coding
 - [x] LZW compression
-- [x] Ford fulkerson flow graphs.
+- [ ] Ford-Fulkerson flow graphs (incomplete)
 
 Machine Learning
 
@@ -57,13 +108,16 @@ Machine Learning
 - [x] Training and Loss
 - [x] Gradient Descent
 - [x] Learning Rates and Batch vs Stochastic learning.
-- [x] Tensorflow implemented linear regression.
+- [ ] TensorFlow linear regression (obsolete TensorFlow 1 APIs)
 
 Syntax Matching
 
 - [x] Syntax matching for atomlike editors.
 
-# Day to Day log.
+## Day-to-day log
+
+The entries below are historical notes about what I worked on each day. They
+have not been rewritten to imply that the resulting code remains correct.
 
 Day 1:
 
